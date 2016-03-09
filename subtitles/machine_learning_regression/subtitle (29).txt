@@ -1,0 +1,15 @@
+[MUSIC] Okay, so in this module we've talked
+about simple linear regression. And what we've seen is we've
+described what the model is. We just have a single input, single
+output, and fitting a line or model. It's just a simple line, to describe
+the relationship between our input x and our output y. We've talked about goodness of fit of a
+specific line to our data and the measure being the residual sum of squares that
+we've talked about in this module. And we've also talked about
+some ways to think about interpreting our fitted line and
+using it to form predictions. But a big emphasis was on thinking
+about how do we actually fit that line to the data, and we talked
+about different optimization techniques. The big one being, gradient descent,
+and using that to minimize our residual sum squares, to come up with our fitted
+line that we're gonna use for predictions. Even though this is a very very simple and basic tool,
+it's actually incredibly powerful. And we'll look at this in
+some of our assignments. [MUSIC]

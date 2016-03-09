@@ -1,0 +1,46 @@
+[MUSIC] Now, let's actually summarize the entire
+gradient descent algorithm for multiple regression. Stepping through, very carefully,
+every step of this algorithm. So in particular at first, what we're
+gonna do, is we're just gonna initialize all of our different parameters to
+be zero at the first iteration. Or you could initialize them randomly or
+you could do something a bit smarter. But let's just assume that they're
+all initialized to zero and we're gonna start our
+iteration counter at one. And then what we're doing is we're
+saying while we're not converged, and what was the condition we talked about
+before in our simple regression module for not being converged? We said while the gradient of
+our residual sum of squares, the magnitude of that gradient
+is sufficiently large. Larger than some tolerance epsilon
+then we were going to keep going. So what is the magnitude
+of residual sum of squares? Here this thing just to be very
+explicit is the square root of the square, so what are the elements of
+the gradient of residual sum of squares? Well, it's a vector where every element is the partial derivative with
+respect to some parameter. I'm gonna refer to that as partial of j,
+okay? So, when I take the magnitude
+of the vector I multiply the vector times its transposed,
+take the square root. That's equivalent to saying I'm
+gonna sum up the partial derivative with respect to the first
+feature squared plus all the way up to the partial derivative
+of the capital Dth feature. Sorry, I guess I should start, the
+indexing really starts with zero, squared, and then I take the square root. So if the result of this is greater than epsilon then I'm gonna continue
+my gradient descent iterates. If it's less than epsilon
+then I'm gonna stop. But let's talk about what
+the actual iterates are. Well, for every feature in my
+multiple regression model, first thing I'm going to do is I'm going
+to calculate this partial derivative, with respect to the jth feature. And I'm going to store that,
+because that's going to be useful in both taking the gradient step as well as
+monitoring convergence as I wrote here. So this jth partial,
+we derived it on the previous slide. It has this formed and then my gradient
+step takes that jth coefficient at timed t and subtracts my step size
+times that partial derivative. And then once I cycle through
+all the features in my model, then I'm gonna increment this t counter. I'm gonna check whether I've
+achieved convergence or not. If not I'm gonna loop through,
+and I'm gonna do this until this condition, this magnitude of my
+gradient is less than epsilon. Okay, so I wanna take a few moments to talk
+about this gradient descent algorithm. Because we presented it specifically in
+the context of multiple regression, and also for the simple regression case. But this algorithm is really,
+really important. It's probably the most widely used
+machine learning algorithm out there. And we're gonna see it when
+we talk about classification, all the way to talking
+about deep learning. So even though we presented this in
+the context of multiple regression, this is a really really useful algorithm,
+actually an extremely useful algorithm, as the title of this slide shows. [MUSIC]

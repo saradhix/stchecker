@@ -1,0 +1,35 @@
+[MUSIC] So the first approach that we're gonna
+talk about is just a closed form solution where we take our gradient, and simply
+set it equal to zero, and solve for w. Just like we did in
+the simple regression case. Okay, here's my gradient of our
+residual sum of squares, and I've set it equal to zero. And now let's solve for w. So, let's do out this multiplication here
+where we're gonna get -2H transpose, y. And then we're gonna get a +2H transpose, H times w, and
+we're setting this equal to zero. And so these matrix multiplies act very
+similarly to if these had been scalars, but we have to keep the order. The order is very important. We couldn't have switched it
+around to be y h transposed, okay. So, now let's solve this equation. First of all, the two cancels out,
+we can just divide both sides by two. And so
+what I'm gonna end up with is h transpose hw equals, I bring this to the other side,
+h transpose y. Then I'm gonna multiply both
+sides by h transpose h inverse. So H transpose Hw and
+now I'm gonna multiple, pre-multiply the other said by the same. H transpose H inverse, H transpose y and
+so this is a little aside. What is a matrix A inverse
+times the same matrix a. Well, that's the definition of, so, by definition of a matrix
+inverse that is the identity matrix. And another aside, so that's aside
+number one another aside if I take a the identity matrix and
+multiply by any vector, so I'll call the vector v,
+I just get v back. Or if I take the matrix and
+multiply it by any matrix, big V, I'm gonna get that matrix back. Okay, so what we see if we apply these
+two identities here is that together, these two terms, h transpose h
+is like our big A matrix here. So we have a matrix times it's inverse,
+this is just gonna be the identity. Then we have the identity
+matrix times a vector w, that's just gonna be the w vector. So we have w, and let me put hats on,
+because remember, that once we set this equal to zero and
+solve for w this is our estimated set of coefficients so
+I'm going to put a hat on w and what we see is w hat is simply
+equal to h transpose h inverse HTy. So this is one of those aha moments. Maybe you missed it. Cuz aha moment is, we have a whole
+collection of different parameters, w0 all the way up to wd. These are the things multiplying all
+the features we're using in our multiple regression model. And in one line I've written
+the solution to the fit. I've fit all of w 0, w 1, all the way up
+to D just by doing this matrix multiply. Okay? So this. Motivates why we went through all this
+work to write things in this matrix notation because it allows me to have
+this nice closed form solution for all my parameters written very compactly. [MUSIC]

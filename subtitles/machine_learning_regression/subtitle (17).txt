@@ -1,0 +1,32 @@
+[MUSIC] Well, we can use the same type of
+algorithm to find the minimum of a function. So, here,
+our interest is min over all w g of w. And on this picture here, for this convex
+function, that's this point right here. And, but let's think a little bit
+about what happens in this case. So let's say we're starting
+at some w value here, and I'd like to know whether I should
+move again to the left or to the right. So increase or decrease w? Well let's look at
+the derivative of the function. And what I see is that
+the derivative is negative. The derivative is negative,
+and yet in this case, I want to be moving to the right and
+increasing w. Now, let's look at a point on the other
+side of the optimum, so some point w here. Look at the derivative. In this case the derivative
+is positive and when I ask whether I want to move
+to the left or to the right, the answer in this case is,
+I want to decrease the value of w. I want to move to the left. So what we're saying is that, when the derivative is positive we want to decrease w and when the derivative is negative, you wanna increase w. So again, in this picture I have
+that the derivative of this function g everywhere on
+the left-hand side of the optimum, in this case, is negative, everywhere
+on the right-hand side is positive. So when I go to do what I'm gonna call
+a hill descent algorithm to contrast with the hill climbing algorithm, the update is gonna look almost
+exactly the same as the hill climbing. Except because of what we just discussed, instead of having a plus sign here,
+and moving in the same direction, meaning the same sign of the derivative,
+we're going to move in the opposite. Okay, so when the derivative,
+just to be very clear, when the derivative is positive,
+what's going to happen? Well this term is going to be negative,
+we're going to decrease w. When the derivative is negative,
+this term, this joint term here is going to be
+positive, we're going to increase w. So that satisfies exactly
+what we stated here. Okay. So that is finding the minimum
+of a convex function. And I wanna emphasize this slide
+right here because we're gonna be looking at a lot of convex functions
+in this course, and in this module. So this is really the picture
+that I want you to have in mind. [MUSIC]

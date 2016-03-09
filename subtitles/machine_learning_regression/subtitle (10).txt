@@ -1,0 +1,71 @@
+[MUSIC] Okay, while working with
+a simple linear regression model, let's talk about how we're
+gonna fit a line to data. But before we talk about
+specific algorithms for fitting, we need to talk about how we're
+gonna measure the quality of a fit. So, we're gonna talk about this orange
+box here which is this quality metric. And in this case, now that we've
+mentioned that our function is parametrized in terms of some
+parameters were calling w that represents w zero and w one in this
+case or intercept in our slope. We know that when we're going
+to predict house values, instead of talking about f hat,
+our estimated function, we can talk in terms of w hat,
+our estimated parameters. Because those estimated parameters
+fully determine our estimated function. So, we're gonna modify this block diagram,
+and replace f hat now with w hat. And talk about estimating
+these parameters w. So what's the cost of
+using a specific line? Well the one we're gonna talk about here,
+and the one that we focused on in the first course of the specialization,
+is Residual sum of squares. And what Residual sum of squares assumes,
+is that we're just gonna add up
+the errors we made between this line here, which represents
+what we believe the relationship is, and what we've estimated
+the relationship to be between x and y. And what the actual observation y was. So we're gonna take each
+one of these errors or residuals and sorry, I should be clear. I talked about error as the epsilon i. The error was part of my model. A residual is the difference between
+a prediction and an actual value. Okay, so
+I wanna make sure that that's clear so that's why this is called
+Residual sum of squares. So this is the formula that we presented
+in the first course of the specialization, so I'll run through it fairly quickly. Our Residual sum of squares is gonna be a
+function of our two parameters, w0 and w1. That determines what
+line we're looking at. So of course as I change that line, we're
+changing the cost, this cost term, RSS. And what I'm doing is I'm adding
+up the difference between the specific house sales
+price of a given house. And what my line specifies it as. And what does the line
+specify the price to be? Well it specifies it as wo + w1 times
+however many square feet this house had. But I'm not just looking at that
+difference nor it's absolute value. I'm looking at the square
+of the difference. That's where the sum of squares comes in. Well that's where the squares comes in,
+and then the sum is I'm adding over this error
+over all houses in my training data set. Okay, so just to summarize residual sum
+of squares is I take this difference between what the line is telling me,
+the price of the house should be. What the actual house price was,
+look at the difference squared and add over every house in
+my training data set. So we saw this equation before. But now I'm gonna write it more compactly
+and we're gonna work with this form throughout the rest of this module and of
+forms like this in the rest of the course, where I've introduced this notion,
+this capital Sigma. What this means is if I write Sigma,
+and I write and i=1 one on the bottom
+of this Greek letter. And a capital N at the top
+of this Greek letter and what I'm saying is I'm
+summing over some quantity. I'll just generically
+look at some quantity ai. I'm summing a1+a2 plus
+all the way up to aN. So I'm summing up n different qualities. And in this case here, what is ai? Well, ai is just this inner thing here so it's yi- [w0 + w1xi] quantity squared. Okay, so this is just shorthand notation
+for what we had on the previous slide, where we're summing over all
+houses in the training data set. But instead of writing this thing in
+English or writing out this really massive sum over 1,000 and 1,000 of houses,
+I'm gonna write it compactly like this. Okay, so now that we have this notation, let's talk about how we think
+about finding the best line. So we have this function that
+if you give me any w0 and w1 it defines a specified cost. So for example this line,
+let's say that the intercept was 0.97 and the slope was 0.85, well,
+that results in some RSS. So let's call it just #1. And then if I give you a different line,
+so that's specified by a different intercept and a different slope,
+that's gonna result in a different cost. So I'll just say that's some other number. And then this other line
+with different parameters has some other number associated
+with its cost as well. And my goal here, when I'm talking
+about estimating a function from data, given a specific model,
+which in this case is just a simple line. Is I'm gonna search over all
+possible lines, all w0 and w1 shifting this line up and down and
+looking at different slopes. And I'm gonna try and find the one. It results in the smallest
+residual sum of squares. So out of these three lines, if those were
+the space of all lines I was looking at, clearly it's not it's a huge
+space I'm looking at. I would choose the one with
+the smallest number here. [MUSIC]

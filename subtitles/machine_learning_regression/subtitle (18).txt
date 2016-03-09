@@ -1,0 +1,67 @@
+[MUSIC] So in these algorithms,
+I said that there's a stepsize. And you might be wondering, well,
+how do you choose that stepsize? So, remember,
+the stepsize we denoted as eta. And there are lots of different
+choices you can make here, and clearly they're very important. This determines how much you're changing your W at every iteration
+of this algorithm. One choice you can look at is something
+called fixed stepsize or constant stepsize, where, as the name implies,
+you just set eta equal to some constant. So for example, maybe 0.1. But what can happen is that you
+can jump around quite a lot. So let's say I start far away. There's a really big radiant. I take a very big step and
+I keep taking these big steps. And then here, I end up jumping over
+the optimal to a point here and then I jump back and then I'm going
+back and forth, and back and forth. And I converge very slowly
+to the optimal itself. And so an analogy here is you can think of
+a snowboarder in a half-pipe where they just keeping ramping up, and back, and
+up, and back, and slowly it's decaying. And slowly they're gonna just settle
+in to the groove of that half-pipe. But you can imagine going back and
+forth and back and forth quite a number of times. But I should mention that
+this fixed stepsize setting will work for a lot of cases we're
+going to look at in this module. Because in most of the cases these
+functions are going to be something that's called strongly convex. That's just a really well
+behaved convex function. It's very clearly convex. It just never flattens out very much. And in those settings, you will
+converge using this fixed stepsize, it just might take a little while. On the other hand,
+a common choice is to decrease the stepsize as the number
+of iterations increase. Okay?
+So this means that there's some stepsize, is often called a schedule,
+so I can write that. Or stepsize schedule that you need to set,
+and you need. And common choices for this are that
+the stepsize you're using at iteration t, is equal to some alpha over t or
+another common choice is some alpha over square root of t. And let's just plot what
+these functions look like. Both of these functions
+look something like this. So the stepsize, so this would be
+the plot of eta of t over iterations t. So the stepsize is decreasing
+with the number of iterations. So why does this make sense? Well, when I start out, I'm typically
+assuming that I'm gonna be far or decently far from the optimal,
+so I want to take large steps, but as I'm running my algorithm,
+hoping I'm getting closer, and I want to hone in more
+rapidly to the optimal. So that's why I start
+decreasing the stepsize. So that when I'm out here, initially
+maybe I still take a really large jump. But then as I'm going in,
+maybe I'll jump across once, but I'm gonna hone in much more
+rapidly to this minimum here. But one thing you have to
+be careful about is not decreasing the stepsize too rapidly. Because if you're doing that, you're
+gonna, again, take a while to converge. Because you're just gonna be taking very,
+very, very small steps. Okay, so in summary choosing your
+stepsize is just a bit of an art. But here we've gone through a couple
+of examples of things that are commonly used out there. Okay, so the other part of
+the algorithm that we left unspecified is this part where we say,
+while not converged. How are we going to
+assess our convergence? Well, we know that the optimum occurs
+when the derivative of the function is equal to 0. But what we're gonna see in practice, is that the derivative,
+it's gonna get smaller and smaller and smaller and smaller and smaller, it's
+gonna get very, very, very, very, very, very, very, very small,
+but it won't be exactly 0. At some point, we're going to want to say,
+okay, that's good enough. We're close enough to the optimum. I'm gonna terminate this algorithm. And I'm gonna say that
+this is my solution. So what we're saying is that,
+what we're gonna need to specify is something where we say,
+when the absolute value of the derivative, I don't care if I'm a little
+bit to the right or a little bit to the left of the optimum,
+but just what the absolute value is. If that is less than sum epsilon. This is a threshold I'm setting. Then if this is satisfied,
+then I'm gonna terminate the algorithm and return whatever solution I have Wt. So in practice, we're just gonna
+choose epsilon to be very small. And I wanna emphasize that what
+very small means depends on the data that you're looking at,
+what the form of this function is. What are the range of
+gradients we might expect? Is the value of the function, a plot of
+the value of the function over iterations? And you'll tend to see that
+the value decrease, and it's basically not changing very much. And at that point,
+you know that you've converged. [MUSIC]

@@ -1,0 +1,54 @@
+[MUSIC] Okay, so now, let's talk about how we're gonna interpret
+the coefficients of our fitted line. And let's start by talking about W-hat 0,
+our estimated intercept. So, that's this point right here, this
+green star, and what does that represent? Well, it's the predicted value
+of a house with 0 square feet. So, we can think of that just as land, because we have that Y-hat
+is = W-hat 0 when X=0. So, when there's no square feet,
+we have that our predicted house value is exactly equal to W-hat 0. But I'll say that in general,
+this is not normally that meaningful. In many scenarios, you don't really
+think of having no input and having the output have
+some meaningful value. And actually in our case,
+if you go back and look at the number, we had that our intercept was -44,850. So, it's saying that land you should
+actually as the seller be giving the buyer money,
+to take that land off your hands. But remember that our
+dataset's really noisy, it's not a perfect model
+of what's going on. So, of course, we have to think
+about interpreting our parameters in the context of what we've
+included in our model. Okay, we'll talk more about
+that in the next module. But, I also want to talk about W-hat
+1 which is our estimated slope. And that tends to have a bit
+more meaning associated with it. So, the estimated slope, I'm highlighting
+with this green triangle here, saying that per unit change,
+in our inputs, so for 1 unit, so 1 square foot, what's our predicted change
+in the value of the house. So, for example,
+let's say I'm looking at estimating the value of a house
+with 1001 square feet. And I want to look at the difference
+relative to the estimated value of a house with just 1000 square feet. Well, what is this, this is equal to,
+if I look at the first term estimating a house with 1,001 square feet,
+how would I estimate that? I would take W-hat 0, + W-hat 1 * 1,001 square feet. And then, I'm gonna subtract for the second term I have it's
+estimated value is again W-hat 0 + W-hat 1 * 1,000 square feet. And these W-hat 0's are gonna cancel. And the difference between
+these numbers is just 1. So, this will just be W-hat 1. So again, W-hat 1 represents the predicted change in the output per unit change in the input. Okay, so that's how we're
+going to interpret W-hat 1. But one thing I want to make very, very clear is that
+the magnitude of this slope, depends both on the units of our input,
+and on the units of our output. So, in this case, the slope,
+the units of slope, are dollars per square feet. And so, if I gave you a house that
+was measured in some other unit, then this coefficient would no
+longer be appropriate for that. So, let's make this
+a little bit more explicit. So now that we know that there
+are units attached to these numbers, I'm gonna put these in, so
+our intercept has units just dollars. So, let me be clear what I'm
+actually highlighting here. The intercept has units dollars, and the
+slope has units dollars per square feet. And when I went through and did my calculation of predicting the value
+of a house with a given square feet, if I actually put in these units,
+I see that everything works out. Here I have dollars,
+here I have dollars per square feet, and then I'm multiplying by square feet. So when I multiply these two
+things the resulting units of this is just gonna be dollars, so the end
+result is something in terms of dollars. That's great. And likewise, when I use the equation
+in reverse, I have dollars, dollars divided by
+dollars per square feet, and I end up with something
+that's in square feet. So, I'll just say units work out, which is great. But what if the house was measured in
+square meters instead of square feet, well, clearly I can't just
+plug into that equation, and likewise what if the price was measured
+in Chinese Yuan instead of in US Dollars. Again, can't just plug into that equation,
+so when I think about magnitude, it only has meaning in terms of the units
+that I use for my input and output. [MUSIC]

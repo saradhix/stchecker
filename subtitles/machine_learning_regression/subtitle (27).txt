@@ -1,0 +1,37 @@
+[MUSIC] So that's our discussion on high leverage
+points and influential observations, but I wanna think about whether
+if you go back to our data. I think it's easier to discuss this,
+looking at our observations. Here what we see on the top part, there's a collection of five
+different observations. So these are five different
+towns that have very high value compared to what you see for
+all of the other towns. So question is even though these
+points aren't high leverage points, because they are in this typical x range,
+Are they influential observations? Meaning if we remove these observations
+will the fit change very much. So, not let's just see what
+happens in this data set. Okay, so we're gonna remove these, what
+we're saying here we're gonna remove these high value outlier neighborhoods and
+redo our analysis. So what we're doing here is
+we're creating a data set, which I'm gonna call sales underscore
+no high end for no high end towns. Which takes our data set,
+still with center city removed, and just filters out all the towns that have
+average values greater than $350,000. Okay, so let's fit this new data set. And again, let's compare coefficients. So I'm gonna compare the coefficients
+to our fit with Center City removed to the fit that further
+removes these high end houses, or sorry, these high end towns. And what you see is, yeah, there is some
+influence on The estimated coefficient. But not nearly as significant as what
+we saw by simply removing center city. So in this case,
+we've removed five observations out of a total of 97 observations. And we see that impact of crime
+rate on predicted decrease and house value changes by a couple hundred
+dollars, but not by the amount that we saw by just removing that one center
+city observation earlier on. So this shows that high leverage
+points can be much more likely to be influential observations for
+just small deviations from the data set. Then outline observations that
+are within our x, our typical x range. Okay, so
+the summary of all of this analysis and discussion is the fact that when you have
+your data, and you're making some fit and making predictions or
+interpreting the coefficients. It's really, really important
+to do some data analysis to do visualizations of your data or
+different checks for whether you have these high leverage
+points or these outline observations and checking whether they might potentially
+be these influential observations. Because that can dramatically
+change how you're interpreting or what you're predicting based
+on your estimated fit. [MUSIC]

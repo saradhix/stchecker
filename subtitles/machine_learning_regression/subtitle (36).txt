@@ -1,0 +1,40 @@
+[MUSIC] Okay, well, I wanna take some time to
+do something that's rather boring but it's actually very important and
+that's to talk about notation. The reason it's important
+is because unfortunately, there's no standard convention in
+the machine learning community for how to denote the things that we're
+gonna be going through in this module. And so we have chosen our notation and
+we really, really like it, but it might be different than
+notation you've seen before. So I want to go very slowly through
+this notation and what it means so that it's very clear in the following
+slides when I'm using this notation, what I mean by it. Okay, so in this case when we're talking
+about multiple regression, our inputs are a whole collection of different
+inputs like number of square feet, bedrooms, bathrooms, and so on. And we're gonna put these all
+together into a vector x. And I'm gonna use this bold-faced notation
+to represent the fact that this is a vector. In some communities they
+might put a bar under, a little arrow over, or
+there are lots of other options. But we're gonna use bold x to denote
+some little d dimensional vector, meaning there are little d
+different inputs in our model. Okay, then we're going to assume that
+our output is just some scalar, so that's just gonna be a normal y,
+no boldness to it. Might be very bold, but
+it's not bold faced. Okay, so our notational
+conventions are gonna be, bold x, square brackets of j is
+gonna take this vector x. And just like you would in Python,
+it's gonna grab out that jth element. Okay, so the result of that is gonna
+be the jth input to our model, and that's just a scalar,
+like number of square feet for the house. For our features, we're gonna use these
+functions h that we talked about before, so hj is our jth feature. And in the case of multiple inputs,
+it might be, and we'll go through this a little bit more in a couple slides,
+It might be a function of multiple inputs. So in general, our features
+are a function of this bold x, this entire d-dimensional vector. Then, when we use bold x sub i,
+what we're saying is that's our ith input, so the input associated
+with our ith observation, the ith house in our data set for
+our housing application. And then just to be very, very clear. Bold x, sub i, square brackets j,
+means we're gonna look at this d dimensional input
+vector for this ith house. So, the number of square feet, bedrooms,
+bathrooms, etc., for this ith house. And we're gonna grab out the jth input,
+which might be number of bathrooms. Okay, so that's, again, just a scalar. Okay, I said I was gonna
+go through that slowly. I think I went though that slowly,
+but again, it's very important so take a little snapshot of this slide. This notation's gonna be used
+throughout the rest of the course. [MUSIC]

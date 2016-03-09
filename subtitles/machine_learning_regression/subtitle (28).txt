@@ -1,0 +1,35 @@
+[MUSIC] Well, the last thing that I, I want to
+cover in this module is the fact that we've looked at a very simple notion of
+errors, this residual sum of squares. And it's actually really,
+really commonly used in practice. But we're gonna talk a lot more about different types of errors
+later in the course. But I wanted to go through some of
+the intuition of what happens if we use a different measure of air. Okay so this residual sum of
+squares that we've been looking at Is something that's called
+a symmetric cost function. And that's because what we're assuming
+when we look at this aerometric is the fact that if we over
+estimate the value of our house, that has the same cost as if we under
+estimate the value of the house. And the question is so
+we actually believe that is the case? And what happens if there might not
+be symmetric cost to these error? But what if the cost of
+listing my house sales price as too high is bigger than the cost
+if I listed it as too low? So for example,
+if I list the value as too high, then maybe no one will
+even come see the house. Or they come see it and
+they say oh it's definitely not worth it. I'm not putting in an offer. So the result might be I get no offers. So as a seller, that's a big cost to me. I've gone through this whole
+thing of trying to sell my house. I want or need to sell my house. And I get no offers. On the other hand, if I list the sales price as too low,
+of course I won't get offers as high as I could have if I had more accurately
+estimated the value of the house. But I still get offers, and maybe that cost to me Is less bad
+than getting no offers at all. For example if I have to move to
+another state I have no choice but to sell my house. Okay, so in this case it might be more appropriate
+to use an asymmetric cost function where the errors are not weighed equally
+between these two types of mistakes. And instead of this dash orange line here, which represents our fit when we're
+minimizing residual sum of squares. I will get some different solution. Again, sorry,
+I love to write over my animations. Here this is the fit minimizing
+residual sum of squares, and this other orange line here is this
+other solution using an asymmetric loss. Asymmetric Loss and
+specifically in asymmetric loss. Let me just say asymmetric cost. Where I prefer to underestimate
+the value than over. And that's what you see here is,
+in general, we're predicting the values as lower. As compared to the line that we got or our
+predictions using residual sum of squares. Okay so that's just a little bit of
+intuition about what would happen using different cost functions and again we're gonna talk a lot more
+about this later on in this course. [MUSIC]

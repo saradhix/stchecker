@@ -1,0 +1,47 @@
+[MUSIC] Okay, well like we discussed the other
+approach that we can take is to do Gradient descent where we're
+walking down this surface of residual sum of squares
+trying to get to the minimum. Of course we might over shoot it and
+go back and forth but that's the general idea that
+we're doing this iterative procedure. And in this case it's
+useful to reinterpret this gradient of the residual sum of
+squares that we computed previously. So, this is what we've been working with. But what I want to point
+out here is that this term, Yi, this is our actual
+house sales observation. And what is this term here? Well, it's the predicted
+value if we use W0 and W1 to form that prediction. So, I'll call it the predicted value, y at i, but I'm gonna write
+it a function of W0 and W1, to make it clear that it's the prediction
+I'm forming when using W0 and W1. Okay, so what we can do is re-write
+this residual sum of squares in terms of these predicted
+observation values. Then when we go to write our
+gradient descent algorithm, what's the algorithm say? Well we have, while not converged, we're gonna take our previous vector of W0 at iteration T, W1 at iteration T and
+what are we going to. We're going to subtract. Going to write it up here,
+we're going to subtract eta times the gradient,
+maybe I'll write it in two steps. So we're subtracting
+eta times the gradient. And what's the gradient? The gradient is minus two sum i = 1 to n, yi- yi hat W0 to iteration T, that's the value I'm using to predict
+my observation i, W1 at iteration T. And likewise for
+the second component for W1. But in this case,
+I'm gonna have to multiply by xi because the gradient is
+a little bit different here. W1t And then I'm gonna multiply this by xi and that is my update to form my next estimate of w0 and w1. Okay let me just quickly rewrite
+this in the way that I was going to before where I see in both
+components of this gradient vector I have this -2 term here and
+I have a minus eta. So I'm going to bring that -2 out here. So I'm just gonna erase this. And rewrite this. The minus two times minus eta
+is gonna turn into a plus sign. So I'll just write this explicitly. This was from minus two times minus eta. Okay. So we are doing gradient descent, even though you see a plus sign,
+we're still doing gradient descent. It's just that our gradient
+had a negative sign, and that made it become a positive sign here,
+okay? But I want it in this form to provide
+a little bit of intuition here. Because what happens if overall, we just
+tend to be underestimating our values y? So, if overall, we're under predicting y hat i, then we're gonna have that the sum of yi- y hat i is going to be positive. Because we're saying that y hat i is always below, or in general, below the true value yi. So this is going to be positive. And what's gonna happen? Well, this term here is positive. We're multiplying by a positive thing,
+and adding that to our W. So, W zero is going to increase. And that makes sense, because we have some
+current estimate of our regression fit. But if generally we're under predicting our observations that means
+probably that line is too low. So, we wanna shift it up. And what does that mean? That means increasing W0. So, there's a lot of intuition in this formula for what's going
+on in this gradient descent algorithm. And that's just talking about
+this first term W0, but then there's this second term W1,
+which is the slope of the line. And in this case there's
+a similar intuition. So, I'll say similar intuition, For W1. But we need to multiply by this xi, accounting for
+the fact that this is a slope term. Okay. So that's our gradient
+decent algorithm for minimizing our residual
+sum of squares where, when we assess convergence what we're
+gonna output is w hat zero, W hat one. That's going to be our
+fitted regression line. And this is an alternative approach to
+studying the gradient equal to zero and solving for W hat zero and
+W hat one in that way. [MUSIC]

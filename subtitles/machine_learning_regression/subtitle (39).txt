@@ -1,0 +1,61 @@
+[MUSIC] Okay, so we've discussed at great length
+this multiple-regression model and we've also talked about how to think
+about interpreting the coefficients of the fitted model. Now, let's turn to how to actually
+fit this model to a set of data. And so you actually did this in
+the first course of this specialization, you did a multiple regression fit. But in that case, you're using
+some pre-implemented algorithms. But, now what we're going to do it
+show you what's under the hood. So, that you can go and
+implement these algorithm's yourself. So, to be clear in this
+part of this module, we're talking about the algorithms
+associated with multiple regression. And in particular, like we did in
+the simple linear regression case, we're gonna talk about
+two different algorithms. One is just a closed form solution and
+the other is gradient descent. And there are gonna be multiple steps that
+we have to take to build up to deriving these algorithms and the first is
+simply to rewrite our regression model. In particular, we're gonna rewrite our multiple
+regression model, which is shown here. This was the equation that was in
+that green box a little while ago. So we're gonna rewrite
+this in matrix notation. To do this, what we note is
+the fact that our ith observation, which I'm gonna show as this pink square. Can be written in terms of
+the multiplication of two vectors. Where the first vector are gonna
+be all of our perimeters. All of our regression coefficients,
+W0, W1, W2. All the way up to W capital D,
+and then this green vector. Which are all of our different features of
+the input so this is going to be h zero of xi h1 of xi, h2 of xi, all the way up to h capital
+D our Dth feature of xi. And then we're going to add our error term
+which I'm going to use this grey square to represent. So when we multiply these two vectors,
+let's just describe what happens. Well we take this first element, multiply it by the first
+element of this blue vector. And then we're gonna add
+the second element of this green vector times the second
+element of this blue vector. And keep doing this all along so
+what we get, just to be very explicit, is w0 h0 xi plus, then when we multiply the second elements
+we get w1 times h1 of xi. Plus all the way up to the Dth. The multiplication we do is wD, hD of xi, and then we're gonna go and
+we're gonna add epsilon i. Okay, so that's how we do a multiplication
+between a real vector and a column vector. It's often called an inner product. And what we can denote it by Is, we're gonna call this entire vector here,
+we're gonna call it w. And on this slide I'm gonna write it, I'm
+gonna emphasize the fact that it's bold to capture my vector notation, but I'm
+not gonna go through that on every slide. I'm just hoping that if I
+don't write a subscript like wj that you remember that it's the vector. Okay and this here, this vector,
+I'm going to write as h, again this bold notation. h of xi and x of course is bold as well. Okay but in particular when
+I'm going to think of vectors always as being defined as columns,
+as a column. So a vertical,
+vertical line that we're showing here. And if it defines a row, then I'm going
+to call that the transpose, okay? The notation is you just put
+a little t on the top of the vector. And what it means is take your vertical
+column and just lay it on its side. So, let me take this pen,
+if this were my vector, and I take its transpose,
+it's gonna become a row vector. All the same elements, so if there
+are a bunch of elements in this vector, they'll still appear in that order
+in the vector defined as a row. Okay, and the same is gonna be true for
+matrices, we're gonna talk about that later. When we think about a square matrix and think about the transpose we're
+just going to lay it on it's side. Okay, so that's what transpose is. So let's rewrite this multiplication,
+so what we have is this bold w transpose times this bold h vector of bold x of i plus epsilon i. And epsilon i is just a scalar, just
+a little quiz, what's w transpose times h? Is that a vector or a scalar? It's a scalar. Okay, so the result, and we can see
+that here, that this is just a scalar. Okay, so equivalent to this. Multiplying w transpose times h, well you can also think about
+multiplying h transpose of x times w. And the reason is because
+when you go through and multiply, must be very pedantic here
+to be clear in these early slides because we are going to be using
+this linear algebra again and again. So I'll just write this out, of xi, w0, w1, all the way up to wD. When I go through and multiply these
+things out, it's exactly the same result. I get h0, xI times w0, or you could
+have written that in the other order, like I did before, h1, hi, w1 plus. All the way up to hD(xi)wd + epsilon i. So exactly the same as what we had before. And we're gonna be using this notation
+throughout the rest of this course. [MUSIC]

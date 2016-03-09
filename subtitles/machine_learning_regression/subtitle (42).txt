@@ -1,0 +1,28 @@
+[MUSIC] Okay, so now we're onto the final
+important step of the derivation, which is taking the gradient. Because as we saw in the simple regression
+case, the gradient was important both for our closed form solution as well as,
+of course, for the gradient descent algorithm. So what's the gradient of our residual
+sum of squares in this multiple regression case? Well, it's the gradient of this
+matrix notation that we use for representing the residual sum of squares. And if you know gradients of vectors and
+matrices, which we're not assuming you do, so please
+don't think that you need to know this, but the result is -2H transpose, so taking that big grain matrix and
+turning it on its side, times y-Hw, which again is that vector, of residuals. And why is this the result? Well, I'm not gonna give
+a complete proof of this. I'm just gonna give some motivation. I'm going to walk through an analogy to
+1D case, and we'll see some patterns, and maybe you'll believe that that's
+the result of the matrix case. So, in particular, if we think about
+taking the derivative with respect to w of a function that is y-hw times y-hw where these things are all scalars. So this is the 1D analog
+to this equation here, where the gradient is just this
+derivative of this one parameter w. That arrow is not quite pointing to w. Well what's the derivative of this? It's equivalent to the derivative with
+respect to w of Y minus hw squared. And, like we've done multiple
+times in this course now, when I take the derivative with respect to
+w of some function raised to the power, by the chain rule,
+I bring that power down. Then I'm gonna multiply by the function
+Hw raised to the power minus 1. And then I'm gonna take
+the derivative of the inside. And what's the derivative of
+this function with respect to w? It's minus h. And so the result here is -2h(y-Hw). So we have the -2 in both cases, this little scalar H is this
+big matrix in our case, and y- Hw in the scalar case,
+this big vector matrix notation here. Okay, so
+just believe that this is the gradient. We didn't wanna bog you down
+in too much linear algebra, or too much in terms of derivatives. But if we have this notation, then we
+can derive everything we need to for our two different solutions
+to fitting this model. [MUSIC]

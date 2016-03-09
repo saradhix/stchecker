@@ -1,0 +1,60 @@
+[MUSIC] Okay, so
+that's one way to find the maximum or minimum of a function depending
+on which scenario we're in. It's just taking the derivative of
+the function, setting it equal to zero. And that solution will be unique
+assuming we're either in this convex or concave situation. But there are other methods for
+finding the maximum or minimum. So, if we're looking at
+these concave situations and our interest is in finding the max over
+all w of g(w) one thing we can look at is something called
+a hill-climbing algorithm. Where it's going to be an integrative
+algorithm where we start somewhere in this space
+of possible w's and then we keep changing w hoping to get
+closer and closer to the optimum. Okay, so, let's say that we start w here. And a question is well
+should I increase w, move w to the right or
+should I decrease w and move w to the left to get
+closer to the optimal. Well, what is the optimal? The optimal is this point here. So, if I had this picture in front of me, I know that I should be
+moving to the right. But mathematically what's
+a way to say that? What's a way to say that where
+increasing that we know. Let me write this down. How do we know whether to move w to the right or left and equivalently meaning increase or decrease the value of w. Well, what I can do is I can
+look at the function at w and I can take the derivative and if the
+derivative is positive like it is here, this is the case where
+I want to increase w. But what if on the other hand I had
+started the algorithm over here at this value of w? Would I want to move increasing w or
+move to the left decreasing w? Well, in this case,
+I'd want to decrease w. And again, if I look at the derivative,
+I see in this case, the derivative is negative. So, we can actually divide the space. Where on the left of the optimal,
+we have that the derivative of g with
+respect to w is greater than 0. And these are the cases where
+we're gonna wanna increase w. And on the right-hand side
+of the optimum we have that the derivative of g with
+respect to w is negative. And these are cases where
+we're gonna wanna decrease w. And what about if I'm exactly at
+the optimum, which maybe I'll call w Star? Do I want to move to the left or
+the right? Well, neither. I want to stay exactly where I am. That's the maximum. And what happens in this case? Well, if I look at
+the derivative at the optimum, we know that the derivative is 0. So, again, the derivative is
+telling me what I wanna do. I don't wanna change w at all. So, this hill climbing algorithm,
+the way we can write it is, we say. While our algorithm has not converged. So, while not converged,
+if I can spell converged. I'm gonna take my previous w,
+where I was at iteration t. So this is an iteration counter. And I'm gonna move in the direction indicated by the derivative. So, if the derivative of
+the function is positive, I'm going to be increasing w, and
+if the derivative is negative, I'm going to be decreasing w, and
+that's exactly what I want to be doing. But instead of moving exactly the amount
+specified by the derivative at that point, we can introduce something,
+I'll call it ada. And ada is what's called a step size. It says when I go, so
+let me just complete this statement here. So, it's a little bit more interpretable. So, when I go to compute my next w value, I'm gonna take my previous w value and
+I'm going to move and amount based on the derivative
+as determined by the step size. Okay so let's look at a picture
+of how this might work. So, let's say I happen to start on this
+left hand side at this w value here. Compute the derivative, and I take a step. Determined by that step size. And at this point
+the derivative is pretty large. This function's pretty steep. So, I'm going to be taking a big step. Then, I compute the derivative. I'm still taking a fairly big step. I keep stepping increasing. What I mean by each of these
+is I keep increasing w. Keep taking a step in w. Going, computing the derivative and as I get closer to the optimum The size
+of the derivative has decreased, and so if I assume that eda is just some constant
+we'll get back to this in a couple slides. But if I assume that there is just
+a fixed step size that I am taking. Then, I'm gonna be decreasing
+how much I'm moving. As I get to the optimal. And if I end up on the other
+side of the optimum, then the derivative there is negative, it's
+going to push me back towards the optimum. So, eventually I'm gonna
+converge to the optimum itself. And note that if I'm close to the optimum,
+I'm not gonna jump very far. Again because when you're close to
+the optimum, that derivative Is really, really small. So this term here is gonna be really small
+and I'm not gonna be changing w very much. [MUSIC]

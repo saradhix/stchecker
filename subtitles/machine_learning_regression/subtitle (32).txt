@@ -1,0 +1,98 @@
+[MUSIC] Okay, so that was just one example of how
+we can think about looking at features of a single input, but
+there are lots of other examples. And let's just go through one application
+in particular where this is very useful, and that's in detrending time series. So here what I'm showing, is I'm showing
+house sales, which are these gray dots, and there is a whole bunch of them,
+this is a real data set. So lots and lots of house sales over time. So instead of plotting house
+sales versus square feet, here we're looking at the trends
+in house value over time. And this plot in particular is for
+the Seattle metropolitan region and this is some data that you guys
+have been playing around with throughout this specialization. And what this black curve shows here
+is the average house value versus time. So just to be very specific
+our observation or our output YI is the sales
+price of the ith, and our input is going to be
+the time of that house sale. So we're going to denote that
+by T sub i for the ith house. And the time is recorded
+monthly because house sales are recorded monthly
+at least in the US. And one thing that we
+see is that on average, the value of houses tends
+to increase with time. So that's one effect that we
+probably want to capture. But then there's another more subtle
+effect that might be hard to see from this plot, but it's the fact that
+most houses are listed for sale in the summer, that's
+the common housing season in the US. And the good houses,
+they go really quickly. In contrast, in for
+example November, December, especially here in rainy Seattle,
+very few houses are listed for sale. Very few people are going out shopping for
+houses in the rain. So what ends up happening is any
+transactions that you see during these months are really from leftover inventory that was sitting around from the summer
+and just didn't sell in the summer because they weren't the best houses during
+that really competitive period. But if people are desperate and
+need to buy a house in November, December they're left with
+whatever inventory is there. Or there's some other special circumstance
+for why that house sale is going on. And so the result of this is
+the fact that you tend to see higher prices in the summer and
+lower prices in some of the off months. And so what that means is what there's,
+what's called seasonality, okay. Seasonality is the effect where
+over some period of time. Which in this case is over
+the course of months. We see an effect where there's
+repeated pattern of prices increasing, decreasing, increasing, decreasing. So this is something
+that'd we like to model. And the way in which we're
+gonna model this is as follows. We're gonna assume that our ith house
+sales, the price of that house sale is comprised of the following
+different components. There's one component which models just
+this increasing trend over time and for the sake of this slide we're just assuming
+a very simple linear trend so this part is just our simple linear regression model
+where our input Is this time index, ti. Then though we're going to add some
+more features to this model and the feature that we're going to add
+is this sinusoidal component which is capturing the seasonality this fluctuation
+of increase prices in the summer, decrease in the off seasons. And what we want is we want this
+sinusoid to reset every year because we see this pattern repeated
+again and again every year in our data. So we're going to chose
+the period of the sinusoid, and if you don't remember you're
+trigonometry that's okay. Just look at this picture of the sinusoid. That will be sufficient for
+what I'm talking about. But idea is that it resets
+every 12 months and so that's captured by this
+two pi t over 12 term. And then the issues though is that in
+general in this case I've talked about the fact that prices tend to
+increase in the summer months and decrease In off season months, but in general you don't really know
+where that seasonality trend occurs. So there's some phase,
+some unknown phase to this process. We can think of that just as a shift, and that's represented by
+that phi parameter there. I've marked in blue because that's
+the color of our parameters. And just to animate this here,
+what I'm saying is we don't know where this sinusoidal kind of trend
+is appearing in our data, whether the peaks occur in June or
+January or something like this. Okay, but now we have an issue
+because one of our parameters, this phi term appears within
+this function of our input, ti. So, we haven't yet talked about this,
+but what this means is that we're, in this form, it's no longer just a simple
+linear regression where the parameters or weights of our model are just multiplying
+the inputs or the functions of the input. So it looks more complicated. But there's a nice trick we can do here,
+and that again is going back
+to some trigonometry. Specifically the following
+trigonometric identity. Which says that if you take sine of A-B,
+then that's equivalent to sine(a)cosine(b)- cosine(a)sine(b). Hopefully I got that ordering correct. And if you apply that identity
+specifically to the case we have here what you see is the following where this phi parameter now what we
+have are two multiplicative terms. We have a cosine phi and a sine phi or
+really a negative sine phi multiplying the functions of our input Ti,
+which are shown in orange. And so we can think of cosine of phi and minus sine phi as just some
+W parameters in our model. And that's summarized right here. So an equivalent way to represent the
+model that we had on this slide here is as follows, where we have again this linear
+term and then this sinusoidal component we're breaking up into a sine and
+cosine term with these linear multipliers, W2 and W3, to account for this unknown
+shift or phase to this function. So, to make this very concrete,
+again we're in a featurized situation where the first feature of our
+model is just that constant feature. The second feature is just a linear
+feature, t itself, our input. But the third feature and
+fourth feature are these sine and cosine functions of our input, t. Okay, so let's apply this
+model to our housing data. And here in this plot we've done just
+that, we're fitting a polynomial trend to capture this increase in prices
+over time as well as the sinusoidal seasonal component to capture these
+fluctuations of prices with the season. And so that's what's shown in this
+dark blue line here and in particular in this case, instead of a simple linear
+trend, we fit a 5th order polynomial. That's why we get a little bit more
+interesting of a shape over time. And to see the effect of
+this sine cosine basis, these features, let's zoom into this plot. So now I've just zoomed in on
+a little chunk of this data and you really see that sine and cosine
+having an effect with prices going up and down over the course of seasons
+across these different years. [MUSIC]

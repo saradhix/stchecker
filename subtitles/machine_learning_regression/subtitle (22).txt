@@ -1,0 +1,39 @@
+[MUSIC] So this is gonna be our Approach 1. And this is drawn here
+on this 3D mesh plot, where that green surface is
+the gradient at the minimum. And what we see is that's
+where the gradient = 0. And that red dot is the, the optimal
+point that we're gonna be looking at. Okay, so let's go ahead. Take this gradient, set it equal to zero. Solve for W0 and W1. Those are gonna be our estimates of our two parameters of our model
+that define our fitted line. Remember, that's our goal. Okay, so I'm gonna take the top line and
+I'm gonna do a little bit of algebra. I'm gonna do it quickly. And I'm gonna assume that you,
+if you would like to, can go through and
+verify that what I did is correct. But I'm gonna take the first line,
+and I'm going to set it equal to 0. The top line, when you set it equal to 0, results in W hat 0, is equal to the sum of yi over N minus W1 hat, sum of Xi over N. And these sums go from i equal one to N,
+just as they did here. And the reason I'm putting the hats
+on are now, these are our solutions. These are our estimated
+values of these parameters. And what we see is that our
+estimate of the intersect for our regression line. Well it takes, what is this? This is our average house sales price. But we're not simply gonna set W0 equal
+to the average house sales price, we're gonna subtract off our
+estimate of the slope, of the line. That's W hat 1. And what is this term here? That's multiplying W hat 1. Well, this is our average Square feet of any house
+in our training data set. Okay so, there's a nice intuitive
+structure to our estimate for W hat zero. But again this is in terms of W hat 1,
+so we have to provide another equation to actually
+get at a solution, and so if we look at the bottom line of this
+gradient the bottom term of this vector, shouldn't call it line I guess
+I'll call it the top term of the gradient and
+this is the bottom term of the gradient. If we solve, set it equal to 0, we're gonna get some of
+yiXi-w hat sum Xi minus W, sorry, this should be W0 hat, W1 hat sum Xi squared = 0. And now what I'm gonna do
+is I'm gonna take W0 hat, my equation for it and
+I'm gonna plug it in. And so what I end up getting out,
+is that W1 hat, once I Plug W0 hat in,
+in terms of W1 and solve for W1 hat. I get W1 hat is equal to the sum of YiXi, minus sum Yi, sum Xi, over N, divided by sum Xi squared, minus sum Xi, sum of Xi divided by N. Okay. Anyway, the point is that it has a close
+form pretty straightforward to go and compute what this is, and
+what we see and wanna note that what we have to compute to compute
+W hat 1 and then plug that in and compute W hat 0 is we need to
+compute just a couple terms. We need to compute,
+sum over all of our observations Yi, we need to compute our outputs, Yi sum over all of our inputs Xi, and then a few other terms that
+are multipliers of this, of our input and output. So we need to compute just
+four different terms. Plug them into these equations and we
+get out what our W hat 0 and W hat 1 is. The optimal values that are minimizing
+our residual sum of squares. The take home message here is that, one
+way we can solve this optimization problem of minimizing residual sum of squares,
+take the gradient set it equal to zero and this is the result. [MUSIC]

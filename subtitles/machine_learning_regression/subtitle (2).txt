@@ -1,0 +1,64 @@
+[MUSIC] This course consists of
+six different modules, and let's preview what these are about. To start with, we're gonna talk
+about simple regression, and why is it called simple regression? That's because we're gonna focus
+on just having a single input, for example the size of your house and
+when we think about defining the relationship between the single input
+and our output, the house sales price, we're just gonna look at fitting
+a very simple line to this data. And that's why it's
+called simple regression. And one thing we're gonna need to do in
+order to discover what the best fitted line is is we're gonna need to define
+something called a goodness-of-fit metric that allows us to say that some lines
+fit better than other lines and according to this metric we can then
+search over all possible lines to find the one that fits the data the best. So in this context of this goodness-of-fit
+metric we're then going to discuss some important optimization techniques that are
+much more general than regression itself. So this is an example of one of these
+general concepts that we're going to see again, many times in the specialization. And the method that we're going to explore
+here is something called gradient decent. So in the context of our
+regression problem, and we have just a simple line,
+a question is well what's the slope and what's the intercept of this line that
+minimizes this goodness-of-fit metric. So this blue curve I'm showing here
+is showing how good the fit is, where lower means actually a better
+fit and we're gonna try and minimize over all possible
+combinations of intercepts and slopes. To find the once that fits best. This gradient descent algorithm is
+an iterative algorithm that's gonna take multiple steps. And eventually go to this optimal
+solution that minimizes this metric. Measuring how well this line fits. Then once we've found this minimum, so
+we've found the best intercepting slope, what we're gonna talk about is how
+to think about interpreting these estimated parameters, and then how to use
+these parameters to form our predictions. We're then gonna move from simple
+regression to multiple regression, and multiple regression allows us to
+fit more complicated relationships between our single input and an output. So, more complicated than just
+a line as well as to consider more inputs in our model. So, for our housing application, maybe in addition to measure
+up the size of the house, we have something talking about how many
+bedrooms there are, how many bathrooms. What the lot size is, what year the house was built and
+we might have a whole bunch of different attributes of the house that we wanna
+incorporate into forming our predictions. And that's what multiple
+regression allows us to do. Having learned how to fit these models
+to data, we're then gonna turn to how to assess whether the fin is any
+good for example in forming predictions. For example,
+this fit shown here between house size and house price seems to be pretty good, but
+if we go to a much more complicated model, we see that it's doing really crazy
+things, but if you look carefully this fitted function is actually explaining our
+observed data these circles really well. But what it's not doing is
+it's not able to generalize to predictions of new houses
+that we haven't observed, because at least I wouldn't use this
+to form predictions of my house value. I wouldn't really believe that this is the
+relationship between house size and price. So question is, what's going wrong here? And this is something that we
+call over fitting to the data, and we're gonna talk about this in great
+length in this module of the course. In particular we're gonna define
+three different measures of air. One called training air,
+one is called test air, and one is called our generalization or
+true air, and that's actually the air we really want
+to form, but we're gonna show that that is something that we can't actually
+attain and we have to use proxies instead. And we're gonna look at
+these measures of error as a function of model complexity to
+describe this notion of over-fitting. Then we're gonna discuss these ideas
+in the context of something called the bias-variance trade-off and
+what this describes is the fact that simple models tend to be really
+well behaved but they're often just too simple to really describe
+the relationship that we're interested in. On the other hand, really complex
+models are really flexible, so they have the potential to fit really
+intricate relationships that might describe pretty well what's happening with
+the data but unfortunately these really, really complex models can
+have very strange behavior. And so this leads to what's called
+this bias-variance trade-off. And machine learning is all
+about exploring this trade off. [MUSIC]

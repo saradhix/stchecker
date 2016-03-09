@@ -1,0 +1,53 @@
+[MUSIC] But before we delve into the course
+itself, let's just talk about what we're assuming you have as background in order
+to successfully complete this course. So in terms of math background,
+we're assuming that you know very basic calculus like how to take
+the derivative of a single variable. Function. But even that we're gonna walk
+through fairly slowly, but it's good if you remember it. We're also gonna assume that you know
+how to do very basic linear algebra manipulations like how to
+multiply to vectors, to matrices, and also of course what the notion is of
+a matrix and a vector, but again, we're gonna step through these ideas fairly
+slowly at the beginning of the course. In terms of programming experience,
+we've tried to make this course as open as possible to people having
+preferences in different languages. We're gonna, encourage the use of Python. But this is not actually required. So all of our programming assignments,
+we're gonna provide you with some starter code and
+that starter code will be in Python. So of course it's helpful if you
+are familiar with Python, but again you're welcome to use
+any language you would like. We're focused on teaching you
+the concepts of machine learning rather than any specific
+implementation details. But, I should mention that if you
+did programming assignments for the first course, you are set for
+what will be required in this course. So in the first course
+of this specialization, we relied on pre-implemented algorithms
+like GraphLab Create, but in this course, we're actually going to teach you all
+the all the algorithmic details and how to implement these algorithms so
+that you can code these up yourself. So in particular, in this course,
+we're suggesting that you use SFrames, which from the first course you remember
+is an open source library that allows for really scalable and efficient data
+manipulation, but you're welcome to use any data structure that you would like or
+library such as pandas. And for our assignments. The structure of the assignments are going
+to start with exploring high level concepts in the first part and then delving into that implementation
+details of each of the algorithms. So for the first part, we're going to
+encourage the use of pre-implemented algorithms, so that you can test these
+high level concepts without getting bogged down in potential bugs in
+your actual implementation. And then in the second part,
+once you've explored those concepts, then we're gonna have you actually
+implement all the algorithms from scratch without relying on these
+pre-implemented methods. If you're using Python,
+you will be using the Numpy library for manipulating matrices and vectors. Okay, so
+the net result is that in this course, you're really gonna get your hands
+dirty in implementing all the methods. Related to regression that you saw in
+the first foundational course this specialization as well as a bunch
+of new methods that we're gonna explore in this course. So finally, let's discuss what computing resources
+you guys need and there are two options. Either, you have your own computer and it
+can actually be a fairly basic computer. But if you are gonna use SFrames,
+you are gonna need a 64-bit machine. You'll also need to have access to
+the internet, of course, to watch these wonderful videos, as well as to
+implement your programming assignments. And you'll need the ability to install and
+run Python. And any libraries we're using
+associated with that and to store a few gigabytes of data, but
+the alternative, especially if you don't have a 64-bit machine, is we're
+providing a set of machines in the cloud that are pre-configured with
+everything you'll need for this course. So all you'll need is internet access
+to access those machines in the cloud. So now that you guys are psyched
+about this course, let's get started. [MUSIC]

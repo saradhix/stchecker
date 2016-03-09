@@ -1,0 +1,47 @@
+[MUSIC] So up until this point we've talked
+about functions of just one variable and finding there minimum or maximum. But remember when we were talking
+about residual sums of squares, we had two variables. Two parameters of our model,
+W zero and W one. And we wanted to minimize over both. Let's talk about how we're going
+to move to functions defined over multiple variables. Moving to multiple dimensions here, where when we have these
+functions in higher dimensions we don't talk about derivatives any more
+we talk about gradients in their place. And what a gradient is. Let me write this,
+this is the notation for the gradient of a function where this
+W is really a vector of different W's. Let's say W zero, W one,
+all the way up to some W, I didn't leave enough room there, sorry. It's the sum WP. And what the gradient is it's
+pretty straightforward actually. The definition it's gonna be a vector, where we're gonna look at what
+are called the partial derivatives of G. We're going to look at the partial
+with respect to W zero. The partial of G with respect to W one. W one all the way up to the partial
+of G with respect to some WP. And let's describe what
+one of these looks like. So, for example here. This partial derivative. It's exactly like a derivative where we're taking the derivative
+with respect to in this case W one. But what are we going to
+do with all the other W's? W zero, W two, W three all the up to WP? Well we're just going to
+treat them like constants. It's as if there were just numbers,
+five, seven and ten, when we first talked about taking
+derivatives in one dimension. The partial derivative [SOUND] is like a derivative with respect to W one,
+in this case. [SOUND]. Treating all other variables as constants. Just to be clear, this gradient
+is in this case if we assume that there's some variables W zero,
+all the way up to WP, there's a reason that I'm using this notation
+we'll see it later in this course. But this represents a P plus one,
+cause we're indexing starting at zero. This is a P plus one dimensional vector. Let's work through a little example here,
+where I defined a function G of W to just be five W zero plus ten
+W zero W one plus two W one squared. And let's compute the gradient of W. And in this case they're
+just two variables, so I have to take the partial
+of G with respect to W zero. I'm gonna take the derivative of this
+thing here, only interested in W zero. This term I get a five the next term,
+well, I"m treating W one like a constant. Just like I would take the derivative and
+get a constant as the result, that's what I'll get, so
+there's a ten, and there's a W one. And then I take
+the derivative of this term. It has nothing to do with W zero. It's just like a constant. So, the result is gonna be zero. Now I take the partial
+with respect to W one and this first term is just a constant with
+respect to W one so it doesn't appear. This next term, well, I end up with these two terms as the coefficient for
+W one. And then I get to this last term, and again using the same derivative
+property's we talked about before. When I have something to a power,
+I'm gonna bring not powered down, so I'm gonna get four W one,
+raise to the one power. Okay, so my gradient of G is going to be five plus ten w one, ten W zero plus four W one. So what does this mean? Well, if I want to look at,
+let me switch to the red color so that you can see it on this plot,
+If I want to look at the gradient at any point on this surface
+well I'm just going to plug in whatever the W one and
+W zero values are at this point. So there's some W zero, W one value,
+and I'm going to compute the gradient. And it'll be some vector. It's just some number
+in the first component, some number in the second component,
+and that forms some factor. [MUSIC]

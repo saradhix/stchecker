@@ -1,0 +1,48 @@
+Okay, so let's think a little bit about
+this form of this closed form solution and what we see is we have this
+h transpose h inverse and let's talk about that a little bit more. Remember h was that big green matrix,
+it's the matrix of all the features for each one of our observations. So each row is a different observation and
+we have that matrix. And we're pre multiplying by the transpose
+where we take it and set it on its side. So, this inner part here is this green
+matrix on its side times the regular green matrix and
+what's the result of that multiplication? Well, remember how many rows
+are there to this matrix? Well there are however many
+observations we have in our dataset, which is N,
+that's how many rows there are. And how many columns? Well, it's however many
+features we're using. And what's our notation for that? That's just capital D. Okay.
+So, if we multiply these two matrices so in contrast when I take the transpose
+I have N columns and D rows. And the result of multiplying
+a D by N matrix by an N by D matrix is just a D by D matrix. So, it's a square matrix
+that's D rows by D columns. So, let me be a little bit more explicit. It's number of features
+by number of features. And then we need to take
+the inverse of this matrix. So, that's gonna be invertible, this
+resulting matrix is gonna be invertible. In general, so I'll say in most cases. If the number of observations we have
+is larger than the number of features. Okay that means that the this
+matrix is full rank and then we can take its inverse. If you don't know what full rank is
+that's perfectly fine for this course. But if you do that's what
+we're referring to here. And when I say in most cases is
+because there's a little caveat where really it's just what we need is we need
+to make sure it's not just the number of observations that we have that
+are greater than the number of features. We need to make sure that
+the number of linearly independent, Observations. So, I should say really instead of
+capital N it's the number of linearly independent observations that needs to
+be greater than the number of features. And, again if that didn't
+make sense to you, that's actually fine just think about
+the fact, and we'll talk about it a lot in this course in later modules that
+this matrix might not be invertible. Okay, so what's the complexity
+of the inverse though? Let's assume that we can
+actually invert this matrix. Well the complexity is often
+noted with this big O notation. So I'm writing a big O, just the letter
+O number of features cubed, and what that means is that the number of
+operations we have to do to invert this matrix scales cubically with
+the number of features in our model. Okay so if you have lots and lots and
+lots of features this can be really, really, really computationally
+intensive to do. So, computationally intensive
+that it might actually be computationally impossible to do. So, especially if we're looking
+at applications with lots and lots of features, and
+again assuming we have more observations still than these number of features,
+we're gonna wanna use some other solution than forming
+this big matrix and taking its inverse. Even though there are actually some really
+fancy ways of doing this matrix inverse, and so know that those fancy ways exist,
+but still, there are some very simple alternatives
+to this closed-form solution. [MUSIC]

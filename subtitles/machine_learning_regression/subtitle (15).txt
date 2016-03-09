@@ -1,0 +1,29 @@
+[MUSIC] So let's just look at
+a quick little example here. So I wrote down a function g(w)=5-(w-10)2. So let's take the derivative
+of this function. So we have to go back and
+remember our calculus but I promise I'll at least
+try to keep it simple. So the derivative of 5
+with respect to w is 0. And then the derivative of this term here,
+well if you remember, if you have some function to some power, well first we drop
+that power, that becomes a multiplier. We write that function again, and the power now is one less than
+what the power was before. So two minus one is one. So I'll just write that
+explicitly to the power of one, and then I have to multiply by
+the derivative of the inside. The derivative of this
+little function itself. So what's the derivative
+of w-10 with respect to w. It's just 1. Okay. So, writing this a little bit
+more compactly we have -2w + 20 as the derivative. And so if we're interested in finding
+the maximum of this equation, and let me just say how do we know
+if we're at a maximum or minimum? In both cases we had derivative equals
+zero as the solution, well to know if it's a min or max, either we can know if we're
+looking at a concave or convex function, but typically we won't
+necessarily know that. We can look at the second
+derivative of the function. Okay, but that's just for
+your information. You're not gonna need to know that for
+this course. Okay, so this function, if we draw what this function looks like,
+then maybe we can see this. So we know that at w equals 10,
+what's the value of the function? It's five. So add w=10,
+the value of the function is 5 and if you go and plot this you'll see that
+the value everywhere else is decreasing and so it, it has this concave form. Okay. So, how do I find this maximum? Well I take the derivative and
+I set it equal to zero and I solve for w. So let's do that. Let's set derivative = 0. So I have -2w + 20 = 0. And I solve for w and I get 10. Okay, so
+that actually matches his picture. Indeed, w is 10 at
+the maximum of this function. [MUSIC]

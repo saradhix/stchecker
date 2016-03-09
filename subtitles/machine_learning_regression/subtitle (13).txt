@@ -1,0 +1,37 @@
+Now that we have an understanding of what
+the fitted line is, and how we can use it, let's talk about an algorithm, or really
+algorithms for searching out the space of all possible lines that we might use, and
+finding the one that best fits the data. So in particular what we're going to
+be doing is focusing in on this machine learning algorithm, which is this dark
+gray square shown in this flow chart. Okay, so recall that our cost was to
+find us this residual sum of squares, and for any given line,
+we can compute the cost of that line. So, for example,
+we showed three different lines and three different residual
+sum of squares here, but our goal was to minimize over all
+possible W0 and W1 slopes and intercepts, but a question is,
+how are we going to do this? So that's the key question that
+we're looking to address in this part of the module. Let's formalize this
+idea a little bit more. So here, what we're showing is
+our residual sum of squares and what we see is it's a function
+of two variables, w0 and w1. So we can write it generically, let's just write it as some function
+g of a variable w0 and a variable w1. And what I've done is I've gone ahead and plotted the residual sum of squares
+versus w zero and w one for the data set you guys played within
+the first course of this specialization. So here along this axis is w zero and
+along this axis is w one. And then we are plotting here
+our residual sum of squares. And that is this blue mesh surface here,
+that's our residual sum of squares for
+any given w zero, w one pair. And our objective here is to minimize
+over all possible combinations of w zero, and w one, so mathematically we write
+that, great, I wrote right over what I wanted to show you guys, so
+let me erase what I wrote before, and rewrite it so
+that it's a little bit more intelligible. But, as I was saying, our mathematical
+notation for this minimization over all possible W0,
+W1 is this notation right here. Okay, so in terms of the picture
+what we want to do is over this entire space of w zero and
+w one, we want to find the place, let me find the place so that this is
+a little easier to see on this slide, so we want to find
+the specific value of W0. So, we'll call that W0 hat. And W1 hat, that minimize
+this residual summit squares. So, this is our objective. And switching back to our blue color here,
+this is an optimization problem, where specifically the optimization
+objective is to minimize a function, in this case, of two parameters,
+two different variables. [MUSIC]

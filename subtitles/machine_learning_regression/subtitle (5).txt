@@ -1,0 +1,13 @@
+[MUSIC] Okay, so for the first part
+of our course on regression, we're gonna start with something
+that's called simple regression. And as the name implies, it's just
+a very simple form of regression, where we assume that we
+just have one input. And we're just trying to fit a line. Okay, but before we get to starting to
+talk about this simple regression model, let's just recall our task of interest. Where our case study is discussing
+how to predict house prices. So in particular,
+we have some house that we wanna list for sale, but
+we don't the value of this house. And as we discussed at fairly great length
+in the first course of the specialization, what we're going to do in this case, is we're going to look at other
+houses that sold in the recent past. And look at how much they've sold and
+different characteristics of those houses, and use that data to inform
+our listing price for our house that we'd like to sell. [MUSIC]

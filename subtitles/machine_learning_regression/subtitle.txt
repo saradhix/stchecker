@@ -1,0 +1,28 @@
+[MUSIC] Welcome to the regression course of
+the machine learning specialization. So, regression is one of the most
+widely used statistics and machine learning tools for
+deriving intelligence from data. And the methods allow you to do anything
+from predicting the price of stocks to understanding gene regulatory networks. In the first course of
+this specialization, we talked about regression
+at a very high level. And implemented some of the methods. But in this course,
+we're gonna go into a lot more detail. And really look inside the hood at
+what are the underlying models and algorithms that allow us
+to do this regression task. This course is a part of
+the machine learning specialization that's designed to be taken
+in a certain sequence. So although you can take this
+course as a stand-alone course, in order to get the experience
+that we intended, we strongly encourage you to take the
+entire sequence of this specialization. So, in particular we're assuming
+that you've seen the content from the foundations course, which provided
+a very high level overview of all the content that we're gonna
+see in this specialization. And gave you some hands on practice
+with the different methods. In this course we're
+focusing on regression but as a part of this course we're gonna teach
+you a bunch of very general concepts that are useful in many different
+aspects of machine learning. So although we're gonna be describing
+things in the context of models and algorithms for regression, some of the concepts are gonna carry
+through in the rest of the specialization. So subsequent courses that we're gonna
+see include a course on classification, clustering and retrieval,
+recommender systems. And then all of this content will include
+with a capstone project involving deep learning that's going to pull in ideas
+from other aspects of this specialization. [MUSIC]

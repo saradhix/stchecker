@@ -1,0 +1,45 @@
+[MUSIC] So we keep talking about
+this housing application. And it's really a nice intuitive way
+to describe the different methods in regression that we're gonna
+be talking about, and that we have been talking about. But regression, like we've mentioned, is
+much, much, much more widely applicable. And this notation of
+capturing seasonality also appears in lots of applications
+beyond just housing. And so I wanted to spend a little time
+talking about other places where we see this seasonality or
+seasonal effects coming into play. And one, which makes a lot of sense,
+is if you're doing weather modeling. Let's say you're trying to predict
+the temperature or rainfall. Well, if you're thinking
+about temperature, well there's variation in
+temperature across a day. It's hotter during the daytime hours and
+cooler during the night. But of course, it's also hotter in
+the summer and cooler in the winter. So there's actually this seasonality
+at different time scales. So in addition to just
+having that one sine and cosine that we showed in that
+housing model, where in that case, we're just just looking at this
+monthly effect repeating every year. Well, for weather modelling,
+if you're predicting temperature, you might wanna add in a sine and cosine functions at different frequencies
+to capture the fact that there are these daily effects as well as these monthly
+effects, and maybe other effects as well. Also you might be thinking about Flu
+monitoring, so you wanna think about monitoring the incidence rate of flu and,
+for example here, the picture I'm showing is in the United States in
+a whole bunch of different regions. And if we look at any one of those regions
+and we look at rate of flu over time, well of course there are gonna
+be peaks during flu season and valleys during the off months. And so you see this kind of seasonal
+pattern in flu monitoring and lots of other types of
+health monitoring like this. And you'll also see it in the things
+like E-commerce, for example, Amazon is really interested in being able to
+stock their inventory pretty accurately. And if you're thinking about selling
+jackets, you have some warehouse here in the US and you wanna figure out how many
+snow jackets or ski jackets to stock. Well, of course, you're gonna wanna stock
+more in the winter months than you would in the summer months because more
+people are likely to purchase jackets in the winter than in the summer. So that's another place where
+seasonality is really important. And it appears in so many applications. Another one that you might not
+think of is Motion capture, just trying to model how
+a person walks over time. And if you look at the data, if you
+put sensors over a person's body and look at how they walk, if you take
+those recordings, you're gonna get these kind of up and down, up and
+down swings, as the person's going through their different motions, raising
+their knees or walking or their arms. And so in this plot here, I'm looking at
+some center trajectories from a person wearing a motion capture suit as they're
+going through different behaviors, and you clearly see this type of
+seasonality here as well. [MUSIC]

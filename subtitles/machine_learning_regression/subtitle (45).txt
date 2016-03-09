@@ -1,0 +1,16 @@
+[MUSIC] >> So the simple alternative
+approach is gradient descent. Where, remember that
+the gradient descent algorithm, we just initialize our vector of parameter
+somewhere and take these gradient steps. And eventually, we will converge to the optimum of this problem. Okay, so what does this algorithm
+look like for multiple regression? Well, it looks very similar to
+our simple linear regression, where we say while not converged,
+we're gonna take our w parameters. And we're gonna update them by subtracting
+sum step size atta times the gradient of our residual sum of squares,
+at our previous set of parameters wt. So what is our residual sum of squares? Sorry, the gradient of the residual sum
+of squares, I'm writing right here, so this update is w at iteration t. The minus sign and this minus
+sign will turn into a plus sign. Two eta times this h matrix, h transpose y- Hw at iteration t. And what is this here? Well, h times w at iteration t is
+my predicted set of observations, the whole vector of them. Assuming that I use w at iteration
+t performing those predictions. Okay, so what this version of
+the algorithm is doing is it's taking our entire w vector, all the regression
+coefficients in our model, and updating them all at once using
+this matrix notation shown here. [MUSIC]

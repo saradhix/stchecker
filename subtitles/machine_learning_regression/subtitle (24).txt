@@ -1,0 +1,21 @@
+[MUSIC] Okay, so let's take a moment to compare
+the two approaches that we've gone over, either setting the gradient equal
+to zero or doing gradient descent. Well, in the case of minimizing
+residual sum of squares, we showed that both were
+fairly straight forward to do. But in a lot of the machine learning
+method's that we're interested in taking the gradient and
+setting it equal to zero, well there's just no close
+form solution to that problem. So, often we have to turn to
+method's like gradient descent. And likewise, as we're gonna see in the
+next module, where we turn to having lots of different inputs, lots of
+different features in our regression. Even though there might be a close form
+solution to setting the gradient equal to zero, sometimes in practice
+it can be much more efficient computationally to implement
+the gradient descent approach. And finally one thing that I should
+mention about the gradient descent approach is the fact that in that case,
+we had to choose a stepsize and a convergence criteria. Whereas, of course,
+if we take the gradient and are able to set it to zero, we don't
+have to make any of those choices. So that is a downside to
+the gradient descent approach, is having to specify these
+parameters of the algorithm. But sometimes we're relying on these
+types of optimization algorithms to solve our optimization objective. [MUSIC]

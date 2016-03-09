@@ -1,0 +1,57 @@
+[MUSIC] But instead, let's think about
+the update just to a single feature. And think about what that looks like, and give some intuition for
+why the update has this form. So, let's go through and derive what
+the update is just for a single feature. Of course,
+we could go through this matrix notation. And figure out what is the update for
+that J row. But, let's go through. It's a little bit simpler to go back to
+this form of our residual summit squares and drive it directly. So, I'm just gonna rewrite
+this more explicitly, so when we start taking derivatives
+it's easier to see what's going on. So, we have the sum of our I equals 1, 2N and we have YI minus. Now, lets write out what this vector
+inner product is and what is it? Well, it's simply our fid. So, we have W0 times H0 of XI minus W1H1 of XI minus all the way to our last feature, W capital D H capital D of XI squared. Okay, so remember when we're taking
+a gradient, well, what's the gradient? It's just a vector of a bunch of partials with respect to W0 then W1,
+all the way up to W capital D. So, let's just look at one element, which
+is the partial of this residual sum of squares with respect to WJ, and that will
+give us our update for this J entry. So, the partial derivative of
+this function with respect to WJ. You go through and remember what we did
+in this simple linear regression model. We keep this sum on the outside, and then we take the derivative of
+this function with respect to WJ. So, the two is going to come down. We're going to get this
+function repeated again. So, YI minus W0H0XI minus W1H1XI dot dot dot minus WDHDXI squared, and then we have to multiply
+what's the coefficient, sorry, it's no longer squared,
+it's to the 1 power. Well, let's go back to what I was asking,
+what's the coefficient associated with WJ? Well, it's minus HJ, so
+it's negative of our Jth feature. Sorry, my pen stopped writing for a second there, minus HJ of XI. Okay, so let's write this more compactly. We can write this as I = 1 to N of, sorry, I'll bring out the minus
+two to the outside here. Minus two times this sum, where the sum we're going to
+have HJ of XI, inside the sum. That's this term. And then, we're going to multiply by this
+function which I'm gonna return to vector notation, just h(xi), transpose w. But in this case, there's no square. Okay, so I'm gonna plug this into the update to the Jth feature weight, where I take the previous
+weight of that feature and subtract off a step
+size times the partial, which is -2 sum i=1 to n hj xi
+times yi- h transpose of xi, this being this vector
+times w also a vector. Where specifically we're looking
+at W from this Tth iteration. Okay. So, again, we can add a little bit of
+interpretation here where this part here, this is, I'm taking the features,
+all the features for my Ith observation,
+multiplying by the entire W vector. So, this is my predicted value of
+my Ith observation using W of T. Okay. So, let's rewrite this. So, here, I've just written exactly
+what I had on the previous slide. Now, let's think about
+interpreting this update here. In particular, let's assume that WJ corresponds to the coefficient
+associated with number of baths. So, let's say the Jth features, let's just assume is number of bathrooms. And what happens if in general,
+I'm overestimating. Sorry, not overestimating. I'm underestimating the impact of
+the number of baths on my predicted value of the house. So, what that means is, if I look
+along this bathrooms direction, and I look at the slope of this hyperplane,
+I'm saying that it's not steep enough so increasing
+bathrooms actually has more impact on the value of the house than my
+currently estimated model thinks it does. Okay so what's gonna happen? So, if underestimating the impact of number of bathrooms. So, what this corresponds to is W hat J iteration T is too small, then what I'm gonna have is that my observations in general are larger than my predicted observations, so this term here on average, we'll be positive. Okay, but we're taking this average,
+multiplying by the feature that's number bathrooms. So, on average. Weighted by number of bathrooms, where this here is number of bathrooms for
+house I. And that's what we're multiplying that by. So this, sorry, that should say then,
+will be positive. And what's the impact of that? The impact of that is
+this whole term here, what we're adding to WJ, will be positive. So, we're gonna increase WJ hat. I'll just say WJ, sorry, I don't know how to annotate this
+to make it clear what I'm saying. I'll say WJ T plus one
+will be greater than WJ T. We are increasing the value. And let's talk very quickly about this
+weighing by the number of baths here. Why are we weighing this
+by the number of baths? Well, of course, the observations
+that have more of the feature, more numbers baths should weigh more
+heavily in our assessment of the fit. So, that's why whenever
+we look at the residual, we weight by the value of
+the feature that we're considering. Okay, so this gives us a little bit of intuition
+behind this gradient descent algorithm, particularly looking just feature by
+feature and what the algorithm looks like. [MUSIC]

@@ -1,0 +1,48 @@
+[MUSIC] Now let's delve into what this
+course is gonna be about. In the Foundations course, we talked about how machine learning is
+about deriving intelligence from data. And in this course, the machine learning method that
+we're gonna focus on is regression. And in particular, what regression is
+gonna assume is that we have some features that are derived from our data that
+are the input to our regression model. And then our goal will be to predict
+some continuous valued output or response to the input. The way we're gonna do this is by learning
+a relationship between our inputs x and this output y. For example, maybe you're interested
+in how taking this machine learning specialization is going to pay off for
+you in the end. So you're sitting here,
+you're doing a lot of really hard work and you wonder where this
+is going to land you. Well, maybe a question you might be
+interested in is what will your salary be after taking this specialization. And so we can think about
+predicting what your salary is based on things like what your
+performance was in the various courses, the quality of your capstone project,
+how many forum responses you are participating in,
+and different features like this. So this would be the input
+to the regression model and the prediction, the output that
+we're trying to predict would be your expected salary at the end
+of this specialization. Another example is predicting
+the price of a stock. And to form this prediction
+maybe we expect that this would depend on the past history of the stock,
+as well as perhaps recent news events, in addition to the trends in
+other related commodities. Or maybe you tweeted something, and you wanna know how many people
+are gonna retweet what you tweeted. Well this might depend on
+how many followers you have, how many followers your followers have, local structure of your follower network,
+what hash tags you used, how many retweets you've had in the past,
+and other features like this. Another example that we're going
+to talk about in this course is a really cool example
+of reading your mind. Where you go and you get some kind
+of brain scan, could be FMRI or MEG and for our sake we're just going to
+think of it as producing an image of your brain even though the truth is it
+produces something more complicated. But we can think of all
+the different pixel intensities as inputs to a regression model
+where the goal of the output is to predict whether you felt happy or sad
+in response to something you were shown when you were getting that brain scan. So it's reading your mind because we want
+to guess how you're feeling just from an image of your brain. But in this course, we're gonna focus in on a case
+study of predicting house prices. So in particular, a question we're gonna
+ask is, what's the value of a given house? Maybe you wanna sell your house and you wanna figure out how
+much to list that house for. And so we're gonna derive this
+intelligence by looking at some data. And the data we're gonna look
+at include other house sales. So we're gonna have the sales price
+associated with a bunch of other houses, as well as the house attributes
+of these other houses, and from these inputs, the house attributes,
+we're gonna learn this relationship between house attributes and the output,
+which is the sales price, and use this learned model in order to make
+the prediction of the value of your house. And this course is all about how to form this relationship between the input and
+the output. [MUSIC]

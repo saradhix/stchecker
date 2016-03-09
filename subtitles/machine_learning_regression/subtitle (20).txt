@@ -1,0 +1,48 @@
+[MUSIC] So that defines a gradient. But one thing that's gonna be useful is just a different way to visualize
+the surfaces that we're optimizing over. So instead of looking at these 3D mesh
+plots that we've been looking at, we can look at a contour plot, where we can kind
+of think of this as a bird's eye view. [SOUND]
+It's a bird's eye view of this
+function that we're examining, where here we've now taken this 3D mesh
+and just transformed it to a 2D plane. So we have, just in case you can't see
+it in the slides, this is w0 here. And this is w1, that's a very big zero. Okay, and
+what each one of these curves is. Again, I'm gonna switch colors to red so
+it's more visible. So this curve, for example, Represents just taking this mesh on
+the left hand side and slicing it. So it's just a slice
+through the 3D function. So. Sorry, the pen is really misbehaving. A slice of the 3D surface where all values here have the same value of this function. Sorry, our functions are called g(w0, w1). So let me just step up and
+say what I'm trying to say here, which is every w0, w1 pair along this ellipse here Has the same
+value of the function g because it was just a flat slice through
+that 3D contour that we're looking at. Okay, so each of these rings have,
+in this case, they are increasing values of the function as we go from blue,
+blue means a low value of the function, all the way out to red,
+that means a high value of the function. We're looking at different slices. We're slicing the function
+at different values, and that creates these different contours. Okay, so this is what's called
+a contour plot, and it's useful because it's easier to work with 2D when
+we're on a 2D surface here. So drawing things will be easier
+with this representation. Okay, so that was just a little
+detour into contour plots. So that I can talk about the gradient
+descent algorithm, which is the analogous algorithm to what I call
+the hill decent algorithm in 1D. But, in place of the derivative
+of the function, we've now specified
+the gradient of the function. And other than that,
+everything looks exactly the same. So what we're doing, is we're taking we now have a vector of parameters,
+and we're updating them all at once. We're taking our previous vector and we're updating with our sum, adda times our
+gradient which was also a vector. So, it's just the vector analog
+of the hill descent algorithm. But, if I wanna show this
+a little bit in pictures here. Again switching back to red because
+it'll be easier to see on this plat. Well if i'm out here at a point the gradient is actually it's pointing
+in the direction of steepest assent. So that's up hill. It's pointing this way. But we're moving in the negative
+gradient direction. So let me specify that this
+thing here is our gradient, gradient direction, but then our steps are gonna be
+in the opposite direction. So let me actually draw- sorry to
+take up a little time here but I think it's worthwhile for clarity. Let me just happen to draw the gradient so
+that it's a purple vector so it's different from the vectors
+I'm going to be drawing right now. Okay. Cuz the other vectors that I'm
+gonna be drawing right now are the steps of my
+gradient descent algorithm. So the actual steps I'm taking are gonna be moving here, Towards this optimal value. So, it's exactly like what
+we saw in the 1D case, but now we're moving it in a 2D space. Or really any dimensional space but
+what I'm drawing is just a 2D space. And in terms of assessing convergence in
+this case well in place of looking at the absolute value of the derivative
+we're going to look at the magnitude of the gradient. And when the magnitude of the gradient is
+less that sum epsilon that we're fixing, we're gonna say that
+the algorithm has converged. >> [MUSIC]

@@ -1,0 +1,26 @@
+Okay, so
+the first regression task that we have is we have to figure out what
+model are we gonna use. Are we gonna assume that there is just
+a constant relationship between square footage and price? That means regardless of
+the size of the room, we are expecting every house to sell for
+the same amount. Well that's probably not a great model. Are we gonna assume that there's
+some linear relationship? So as I increase square footage, my price increases at the same rate
+as I'm increasing square footage. Or I'm I gonna assume that
+there's some quadratic fit or some higher order polynomial fit, or
+the list of models I could consider is very long and that's what this
+course is partially gonna be about. Exploring different options that
+we have for models of our data. Okay, so one task is out of the space of
+all these models that we might consider. Which is the one that we should use for
+a given dataset and task that we have? Okay, but now, let's assume that we have selected the model we're gonna use, in this case, here, we're assuming that we're gonna use just a quadratic fit, so assume Model, f of x,
+is a quadratic function. Then our next task is gonna be to estimate
+a specific quadratic fit to the data. Okay, so a model just specifies
+the form of something, it's gonna be defined in terms
+of some set of parameters. And then we're gonna have to estimate
+what the specific fit is from the data. So for example, here, this is our estimated quadratic fit. And we'll call it f hat of x,
+this is our estimated function that's fit from
+our specific dataset. Or this is another function
+that we could have fit. And we'll talk about the way
+in which we're gonna fit functions to data in this course. Okay, but the point is that first we
+have to choose a model, then we have to provide some procedure, some algorithm,
+for fitting that model to the data. And coming up with a specific
+curve that we're gonna use for our tasks such as prediction. [MUSIC]

@@ -1,0 +1,78 @@
+[MUSIC] So let's see what happens if
+we remove this observation. And this observation here,
+this is the observation for Center City, that downtown region. So, not surprisingly,
+that's where a lot of crimes happen, but it's also where there's a mixture of
+low value and very high value homes. So on average, the value is
+higher than one might expect for the amount of crime that
+occurs in that region. Okay, so what we're gonna do now, is just get down to this line here, we're gonna simply remove
+Center City from our data sites. Okay, and I know that Center City
+is the town that is zero miles. If we go back to this column
+that we discussed before, it's zero miles to Center City,
+because it is Center City. So we're just removing
+that row of our data and then we're gonna redo our scatter plot. If we scroll down we see that what
+we have is our cloud of points, but for a much smaller range of crime now that
+outlying center city has been removed. Okay, so now what we're gonna
+do is we're gonna go and refit our simple regression model. But on this data set where
+Center City has been removed. So I'm calling this Crime Model_NoCC
+meaning for no Center City observation. Now let's look at the fit
+associated with this new model. Well actually it's the same model,
+but just on a revised dataset. And what we see again
+is this downward trend with house value with
+increasing crime rate. But we see a much better fit to
+the observations that are remaining in our dataset. But to make this a little more explicit,
+let's actually compare the coefficients, between the fit that we had when
+Center City was in our dataset, and the fit that we got when
+we removed Center City. Okay, so here are the coefficients,
+our intercept, and our slope when we had Center City. And here are the coefficients
+when we remove Center city. So let's talk about this slope term. When Center city was in our dataset,
+we said that the average house value decreased by an amount of $576
+per unit increase in crime rate. Remember we know how to
+interpret these coefficients and that's what I'm doing right now. In contrast, when I remove Center City, what is the predicted decrease in crime
+rate I'm get, I mean sorry, predicted decrease in house of value that I'm
+getting per unit increase in crime rate? Now, just removing one observation, my predicted decrease is $2,287. That's significantly different. So when I'm going and
+I'm making an interpretation about how much crime rate affects
+drops in house value. I have significantly different
+interpretations when I include Center City in the dataset versus removing it. So now let's just discuss a little
+bit about why this is, and this brings us to two points. I've put a little paragraph of text. We're gonna share these
+notebooks with you. You can go through rerun everything
+we're doing, do different analysis, and also read the comments that I've put here. But let's discuss this idea of what
+are called High Leverage Points and Influential Observations. So, a high leverage point is
+a point that along the x-axis, along our input axis is an outlier. So, it's very extreme value,
+either extremely large or extremely small, relative to
+where we have other observations. So, if we go back up to the plot
+that has Center City in it, we see clearly that the crime rate
+associated with Center City is very, very different than the crime
+rates we see for other towns. So what that means is that point is a high
+leverage point, because, if we go back and think about our closed form solution for our simple regression model, for
+estimating the coefficients of this model. Well if you go and look at those equations
+you'll see that there's a term that relates to the center of mass of our
+X values, so the average X value. And so including a point
+that's very far out is gonna strongly influence where the center
+of mass of this line is. So that's gonna dramatically
+change the fit as well as another term that depends on
+the value of this observation, which is gonna have this line trying
+to get close to this observation. Remember, we're trying to minimize
+residuals on the squares. So if it ignored it and it just draw
+a line very steeply going down. We'd have a very massive residual
+sum of squares for this point here. So it's gonna try and hit this point. And thus, the influence of
+that point can be very large. Okay, so this gets us to a point
+of influential observations. Now, let's just return to
+this little text I have here, where just because an observation
+is a high leverage point, meaning that it's outlined,
+either very small or very large X. It doesn't mean that it's going
+to strongly influence the fit, because if that observation follows
+the trend of the other data. Then it might not influence
+things very much at all. Removing that observation you might get
+a very similar fit, had Center City had a similar kind of trend to what
+we saw for the other observations. However, it has the potential
+to strongly influence the fit as we've seen in this demo. So an influential observation
+is an observation where if you remove it from the dataset
+you get a very different fit. But I also wanna emphasize that points
+that are not high leverage points. So points that are actually
+within our typical X range can be influential observations. So in particular you can think of an
+observation that's very outlined in the Y direction in our response. So for example, a town that has an
+extremely high value relative to what you might see from other observations, well
+that can also strongly influence the fit. But the potential for doing so is much less when it's in the typical X
+range if you have dense observations, because the fit will be controlled
+by all these other observations. Whereas if it's an outlying point, you can just think of the control
+it has as being much, much greater. [MUSIC]

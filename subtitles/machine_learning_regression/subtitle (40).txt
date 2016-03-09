@@ -1,0 +1,38 @@
+[MUSIC] Okay, so that was rewriting the model for
+just a single observation. But it's gonna be very, very helpful
+in our deriving these algorithms to write the equation for
+all the observations stacked up together. Okay so, we're gonna have to dig
+through a little bit of linear algebra in order to have a really nice closed
+form solution for fitting this model. So let's start by just stacking
+up all our observations, taking all these pink squares that I
+showed on this previous slide here and putting them into one big vector. Where this vector is my first house sale,
+my second house sale, my third house sale, all the way up to how
+many observations do I have in my dataset? Capital N, that's my capital
+Nth house sale and I can write the model for all these observations
+in this big matrix vector notation, where here again I have this W
+vector that we talked about before. Where I have W0, W1, W2, to W capital D. And I know that each one of
+my observations has an error associated with it. There's the error for
+the first observation, error for the second observation,
+error for the third observation. All the way up to the error for
+this nth observation. And I'm gonna call this vector,
+this capital N dimensional vector epsilon. Okay, so now, let's describe
+this big green box, this matrix. Well, how do I form my first observation? I multiply the weights
+by the features of that first observation, so the features of that first Observation are H0 of X1, H1 of X1, H2 of X1,
+all the way up to H capital D of X1. So if I just forget the fact that it's in
+a big matrix, if I just look at that row, that looks exactly like my H transpose,
+my little H transpose. Okay so this row is this little H transpose of X1. And so just for that row I get the same result as
+what I showed on the previous slide. I multiplied W by H transpose and that forms that functional fit for
+that observation. And then I just add that noise term. And so then I do this for
+each one of my observations. The same is true for
+the second observation, but when I go and plug into my features. Of course I have to plug in the input, the
+x associated with that second observation. All the way to,
+well let me just be very clear, let me write one more so it's clear. H1, X2,
+all the way up to H capital D of X2. And I do this for every row of
+this big matrix until I get to my nth observation and
+I plug in XN into my set of features, all the way up to H capital D of XN. Okay, I'm gonna call this really
+big matrix here capital H. And what we're saying, is we're
+saying that we can write our entire regression model for
+capital N observations as this y vector. I'm sorry I should annotate the fact that
+this pink vector here I'm calling bold Y. So this Y vector is equal to this H matrix times this W vector. I'm still sticking with the bolds,
+but I'm gonna give up very soon, okay? Plus this epsilon vector that
+represents all the errors in my model. Okay, so this is our matrix notation for our model of N observations. [MUSIC]

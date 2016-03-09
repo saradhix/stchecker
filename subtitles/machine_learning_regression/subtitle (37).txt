@@ -1,0 +1,42 @@
+[MUSIC] So let's go back to something
+a little bit more interesting, or hopefully more interesting, I guess more
+interesting if you're a statistician. Which is our regression model. And in this slide, I'm being very
+careful about the boldface notation, and you'll see that I'm very careful with this
+boldface notation throughout this course. So, it's meaningful. Okay, so
+when we have these multiple inputs, the simplest models we can think of is
+just assuming that our eye thoughts or vision is just a function directly
+of the inputs themselves. Not other functions of the inputs
+just taking number of square feet, number of bathrooms,
+number of bedrooms and plugging those directly
+entirely into out linear model. And again, we still have this noise term,
+epsilon i. So, just to be very explicit about
+the features associated with this simple hyperplane model, well, the first feature in our model is
+just this one, this constant feature. The second feature is the first input. For example, number of square feet. The third feature, indexing is weird,
+but third feature is our second input. For example, number of bathrooms. And this goes on and
+on till we get to our last input, which is the little d+1 feature. For example may be lot size. For generically, instead of just a simple
+hyperplane just like we talked about, instead of a single line,
+you can fit a polynomial. Well instead of just a hyperplane,
+we can fit some D-dimensional curve. This is capital D-dimensional curve. Because we're gonna assume that
+there's some capital D different features of this of these multiple inputs. So just as an example,
+maybe our zero feature is just that one constant term and
+that's pretty typical. That just shifts up and down where
+this curve leads in the space and maybe our first feature might
+be just our first input like in the hyperplane example which is quite fit. And the second feature,
+it could be the second input like in our hyperplane example, or could be some
+other function of any of the inputs. Maybe we wanna take log
+of the seventh input, which happens to be number of bedrooms,
+times just the number of bathrooms. So, in this case our second feature of the
+model is relating log number of bathrooms times number, log number of bedrooms
+times number of bathrooms to the output. And then we get all the way
+up to our capital D feature which is some function of any of
+our inputs to our regression model. So this is our generic multiple
+regression model with multiple features. And again we can take this big sum and represent it with this
+capita sigma notation. So this formula, Yi, equals the sum of Wj,
+Hj of X, plus Epsilon i, that is gonna be an equation
+that we're gonna use a lot. That's why I put this green
+box around the equation. This is an important equation
+that's gonna follow us for the rest of this module,
+and throughout this course. Okay, so just one more slide on notation. We're gonna use capital N to represent
+the number of observation we have. We're gonna use little d to represent
+the number of inputs, and we're gonna use capital D to represent the number of
+features we take of those inputs. [MUSIC]

@@ -1,0 +1,50 @@
+[MUSIC] Okay, so we've talked about this simple
+linear regression model, just a line. And then we talked about how our goal in fitting this model is gonna be
+to search over all possible lines, and find the line that minimizes
+the residual sum of squares. We haven't talked about how we're
+gonna do that, that's gonna come next. We're gonna talk about
+specific algorithms for searching over all possible lines to
+minimize residual sum of squares. But right now, let's just assume
+that we have some fitted line and let's talk about how we're gonna use it
+and how we can interpret the parameters. Let's start by contrasting
+the model from the fitted line. So, our model,
+which I've written again here, is in terms of parameters. These are parameters, they're unknown variables of our model. And our goal is to estimate these
+parameters, fix values of these variables based on our data, and
+so that's what w hat represents. These are estimated parameters, so these take actual values. So for example, maybe our intercept is -44,850 and our slope is 280.76. And these aren't random
+numbers that I generated here, this comes from the first course. If you look at the notebook for doing
+the regression fade of sales price on square feet, these were the numbers
+that came out for these two parameters. Okay, so these estimated
+parameters define a specific line. Okay, that's what this is. This line represents -44,850 + 280.76 times x. So, a model is in terms
+of sum parameters and a fitted line is a specific
+example within that model class. So, it's a specific line. Now let's talk about how we can
+think about using our fitted line. So one thing that we can ask is to predict the value of this house
+that we'd like to list for sale. So this house has some
+number of square feet, and we'd like to guess the price, and
+how are we gonna guess the price? Well, it's very straightforward. We're just gonna plug
+into our fitted line. And so we're gonna take the square feet
+of this house, which is represented here. Plug that into the equation of this line,
+and that's gonna produce our estimated
+value of the house right here. I want to mention one more thing here. So I wanna mention that y hat,
+that's our predicted value of the house. Y hat is exactly equal to f hat(x), okay? Our model, remember our model said that yi is approximately equal to f(xi). But when we go to do a prediction, y hat. That's exactly equal to f hat(x). And why is that? That's because the error is equally
+likely to be above or below the line. And f hat represents our best
+guess of the line given our data. And so
+if we wanna guess the value of the house, we're unsure if that error for
+that specific house was above or below the line, so our best guess
+is to put it exactly on the line. Well I can use this fitted
+line also if I'm a buyer, not just if I'm a seller just
+in listing my house for sale. So for example,
+what I mean here is that I might have some amount of money that
+I can spend on a house. And I want to know how a big of
+a house can I expect to purchase with that amount of money. Well instead of estimating or predicting the value of the house,
+I can think of predicting the square feet. So just using this equation in reverse. So I have some amount
+of money in the bank. And that's gonna be $ in bank is this. And then I'm gonna look
+at how many square feet, I believe that I can purchase
+with that amount of money. Okay, so
+let's just go through a concrete example. Here's the fitted regression
+line I talked about before. So it's -44,850 + 280.76 times x. And what I'd like to do is
+predict the value of a house that has 2,640 square feet. So I do, it's just plug in
+2,640 into this equation. That's my y hat. And that comes out to be,
+if you do that calculation, $696,356. Likewise, I can say, well, I wanna predict how many square
+feet of house I can purchase if I have $859,000 to spend on the house. So if you do this calculation,
+you get that you can afford a house or you expect to buy a house that's
+roughly 3,219 square feet. [MUSIC]

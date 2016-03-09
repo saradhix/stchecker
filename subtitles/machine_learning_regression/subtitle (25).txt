@@ -1,0 +1,50 @@
+[MUSIC] Now we're gonna discuss an important issue
+of the influence of what are called high leverage points. And these are points that can be
+considered influential observations. But to have this discussion, I think it's
+really useful to just look at some data. So to start with, let's fire up
+graphlab and then let's load some data. And for this,
+we're gonna load our data into our SFrame. And I'm gonna assume that you guys are
+familiar with a lot of what I'm doing here from the foundations course where
+we went through pretty slowly, a lot of the graphlab related
+code that we're seeing here. And I wanna emphasize that throughout
+this course you'll actually learn how to implement these methods, but for
+the sake of this demo and other demos in this course, we're gonna just use
+graphlab Create to keep the discussion at a much higher level about the concepts
+that we're trying to convey. Okay, so the data set that we're
+looking at here In this example is a Philadelphia housing data set,
+where in particular, our data set consists of
+the average house price in a whole collection of towns in
+the greater Philadelphia region. And we also have information about
+crime rates in each one of these towns. As well as how far that town
+is from Center City and Center City is the downtown
+region of Philadelphia. So, let's start analyzing this data. And to do this, what we're going to
+start with is just making a scatter plot of what's the relationship between average
+house sales prices, and crime rates. Okay, so here we are, we're gonna do just a .show command to show a scatter plot of, on the x axis we have crime rate. And each one of these little
+blue circles or cyan, light blue circles is
+a different town in our dataset. And we have a total of 98 different towns. And on the y axis what we have is
+the average house value in that town. Okay. And so, from this you can see that
+there's some relationship between our crime rate and our house sales price. In particular, we see that for
+towns that have lower crime rates, they tend to have higher house values and
+vice versa. So that makes a lot of sense. So let's try and actually fit
+a relationship between crime rate and house price. So we're gonna go through and fit this
+regression model doing our standard dot linear regression command,
+taking out target, or our output,
+to be that house price in that region, and taking our features to just be a single
+feature, which is crime rate in that town. Okay, so now what we've done is we've
+output this to something called crime underscore model and
+now let's look at what this fit resulted. So I just Import our map plot library to start making some plots here,
+and what we're gonna show is
+we're gonna show a plot of the observations that we showed
+before as well as our fitted line. So this is our fitted simple linear
+regression model is this green line. So these are our predictions
+of house values for each crime rate going from 0 up to somewhere around,
+I don't know, 360 or something like this. So we do see a trend where house value decreases as crime increases,
+the slope of this line is negative. But one thing that we pretty immediately
+see is there's an observation out here, there's this blue dot which has
+extremely high crime rates but the house value is I mean it's low-ish,
+but it's not as low as the house values in other regions
+that have significantly lower crime rates. And we see that our line, our fitted line, is getting pulled towards this
+observation that's all the way out here. So it's being,
+at least it looks like from the picture, being heavily influenced
+by this one observation. And that's really,
+really far on the x axis.

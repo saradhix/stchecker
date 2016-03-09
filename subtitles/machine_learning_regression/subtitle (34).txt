@@ -1,0 +1,27 @@
+[MUSIC] So we talked about polynomial regression, where you have different
+powers of your input. And we also talked about seasonality where
+you have these sine and cosine bases. But we can really think about any
+function of our single input. So let's write down our model a little bit more generically
+in terms of some set of features. And I'm gonna denote each one of
+my features with this function H. So H0 is gonna be my first feature, H1 my second feature,
+H capital D, my last feature. So we can more compactly
+represent this model using the sigma notation that
+we introduced previously. Where we put an index I
+equals one to capital D. Saying we're summing over each of
+these capital D different features. And just to be very clear h
+sub j of x is our jth feature, and wj is the regression coefficient or
+weight associated with that feature. So just to give some examples that we've
+gone through, this first feature might just be one, this constant feature that
+we've used in all of the past examples. Or when we think about our second feature,
+h1, maybe that's just our linear term, x. Our third feature might be x squared or
+maybe it's our sine basis. Or we could think of lots of
+other feature examples and when we get to our capital Dth feature,
+maybe it's just our input raised to the pth power when we're
+thinking about polynomial regression. So, going back to our
+regression flow chart or block diagram here, we kinda swept
+something under the rug before. We never really highlighted this
+blue feature extraction box, and we just said the output of it was x. Really, now that we've learned a little
+bit more about regression and this notion of features, really the output of
+this feature extraction is not x but h(x). It's our features of our input x. So x is really the input to
+our feature extractor, and the output is some set of functions of x. So for the remainder of this course, we're gonna assume that the output of
+this feature extraction box is h of x. [MUSIC]

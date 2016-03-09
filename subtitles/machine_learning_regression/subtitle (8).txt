@@ -1,0 +1,50 @@
+[MUSIC] Okay so in the first course
+of this specialization, we introduced this block diagram or
+flow chart for regression. As well as a bunch of other
+machine learning tasks, but I just want to walk through this again. So we're going to assume that
+we have some training data. Okay, so all of a sudden I've
+said the word training data, and I hadn't said that to this point. That's a topic we discussed
+at a very high level in the first course of the specialization, and we're gonna discuss the concepts of
+training data, test data, validation sets, lots of other ideas about fitting
+our models and accessing our fits. And chosing between models and
+all these different topics. We're gonna discuss that in this course. But for right now, if you don't know what
+it means to have training data, go back to the first course of this specialization,
+watch that video or look it up online. For now, I'm gonna assume that you
+know that we've some training data and we're using our training data
+to fit a specific model. And for the rest of this module,
+that's gonna suffice, we're only looking at training data. And all the other discussion
+about validation sets, test sets, and everything like this,
+choosing between models, assessing the fit of the models,
+that's going to come later in this course. Okay, so when I talk about data
+in the rest of this module, I'm assuming we're talking
+about just our training set, that we've already done some split and
+we have our training data, okay. Think I've said enough on that. So, we have our training data and
+in this case, that's gonna be some table of house id, house square feet and
+then the house sales price. And we have this big table
+of all these quantities. And then what we're going to do,
+is extract some features. So maybe, actually, at this point instead
+of specifically saying how square feet, I can just say that there's
+some set of house attributes. We might have things in
+addition to square feet. And so one step we're gonna have to do is
+figure out what input we're gonna use for our regression model. We're gonna talk about more general
+features later in the course, but for now we're just assuming a simple setup
+where we're gonna choose one of our house attributes, call that the input to this
+regression model, and work from there. So, we've talked about using
+square feet as our selected input and then we're gonna use
+our Machine Learning model, which is regression,
+to predict our house sales prices. So y hat represents our predicted, house sales price. And how are we predicting it? Well, based on some estimated line or
+curve, so this is our,
+f hat is our estimated function. That's fit from our data set, or,
+specifically our training data set. And how are we gonna determine f hat? Or how are we gonna
+estimate this function? Well, first we're gonna need to
+describe some quality metric that says I should describe what Y is. I already mentioned this earlier,
+but let's write it down explicitly. This is the sales price, the actual sales price of our houses, and
+we're gonna compare the actual sales price to the predicted sales
+price using the any given F hat. We're gonna say how well did we do? And that's what the quality metric is. So there's gonna be some error
+in our predicted values. And the machine learning algorithm
+we're gonna use to fit these regression models is gonna
+try to minimize that error. So it's gonna search over all these
+functions to reduce the error in these predicted values. Okay, so
+this is our overall flow chart and we're gonna walk through the various
+components of this throughout this module and
+in more depth in the rest of this course. [MUSIC]

@@ -1,0 +1,49 @@
+[MUSIC] But before we get to how to minimize
+residual sum of squares in particular, let's talk about optimization
+in a more abstract sense. In terms of just a generic function and
+thinking about how do we minimize it, what are the properties of the minimum
+of a function and algorithms for achieving that minimum? One of the first important concepts that
+we can talk about is the notion of convex and concave functions. So here, I have a picture
+of a concave function over just one variable, we'll call it w. And this function here, this is g(w). And this is a concave function, and
+the way I remember concave versus convex, is concave it looks like you're in a cave,
+so it looks like the arch of a cave. And convex is just the other one. So, the way we can think
+about defining what a concave function is,
+we can look at any two values of w. Let's call it a and b. And look at the value of
+the function at a and b. So g(a) and g(b). And let's draw a line between g(a) and
+g(b). So that's this green line here. And what we see is that this line lies below g(w) everywhere. And a concave function is function
+where for any value of a and any value of b that you choose, when you go and draw
+this little line between the points of the function, it's always gonna lie below
+the actual curve of the function itself. A convex function, on the other hand, let's just draw
+a little picture of a convex function. It has exactly the same, but
+opposite, so not the same. It has exactly the opposite property. Where if you choose any a and any b, so just to be clear this is w, this is g(w). If I go and connect g(a) with g(b), with just a line, and this line is above g(w), everywhere. Okay, so that's the very intuitive
+geometric definition of what a concave or convex function is. But then of course there are functions
+that are neither concave nor convex. So, let me just draw two examples here. Here's an example of a function
+that is not concave nor convex. And how do we see that? Well, let's look at a point a and a point b, and
+draw a line between these points. And we see that this line lies both below
+the curve here and above the curve here. So it doesn't satisfy either
+the concave or convex criteria. And likewise this function Has
+the same property, a and b. Draw our little line,
+which okay I didn't draw that well at all. Let me try and draw a straight line. But I think you get the point, that
+neither of these functions are concave, nor convex. Okay, so that's the notion of defining
+what a concave or convex function is. But we're looking at
+an optimization objective, where either our goal is to find
+the minimum or maximum of a function. So typically if we're looking at
+a concave function, our interest is in finding the maximum, and for
+convex it's in finding the minimum. So let's look at, what is the maximum
+of this concave function? Well, that's just this point right here. So that is the maximum. And [COUGH] here, what I'm saying is our goal is max over all w, g(w). In terms of the notation that we
+introduced a little bit earlier. And so what's the property of this
+concave function at this point? Well what we know is that this is
+the point where the derivative is 0. So there's no rate of change of
+this function at this point. And what about a convex function? If we're seeking to find
+min over all w g(w), well the minimum is clearly
+this point right here. And again, what's the property? Same thing, derivative = 0. And note that for the concave and
+convex functions, there's only one place
+where the derivative = 0. In contrast, when we look at the two
+examples for functions that were neither concave nor convex that we
+showed on the previous slide. What we see is in this case, for example, they're multiple locations where
+you have the derivative equaling 0. So, let's write that explicitly and say that there are multiple solutions to derivative = 0. In contrast for this function there's
+actually no solution to derivative = 0. The derivative is nowhere near 0. The function continuously
+has a rate of change. So, no solution To derivative = 0. Okay, so the key take home message here, is the reason we're talking about concave
+and convex functions is the fact that when we have an objective to find
+the minimum or the maximum. Minimum of a convex, maximum of a concave. The solution to that is gonna be unique,
+and we know that it's gonna exist. [MUSIC]

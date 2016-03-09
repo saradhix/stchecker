@@ -1,0 +1,6 @@
+[MUSIC] In this module, we're going to be
+looking at multiple regression, which is linear regression when
+you have multiple features. Where each feature is some function of
+either a single input, or multiple inputs. And this concept of multiple regression
+is really important in practice. It's probably the most
+widely used statistical and machine learning tool out there. [MUSIC]

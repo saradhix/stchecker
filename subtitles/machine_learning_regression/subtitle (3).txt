@@ -1,0 +1,73 @@
+[MUSIC] As one example of a way to handle this
+bias variance trade off, we're gonna talk about something called ridge regression,
+which not only includes a term that measures the fit of the function
+to the data, which is what we talked about before, but also incorporates a term
+that encodes what the model complexity is. Not quite directly, pretty indirectly
+as we're gonna describe in this module. But a key question then is how
+are we gonna define the balance between how much we emphasize the fit to
+data versus this model complexity term. For this in ridge regression
+there's a parameter that balances between these two terms. And to define this parameter, we're gonna discuss choosing it using
+something called cross validation. And this again is a tool that's much
+more general than just for regression, and it's an idea for
+how to choose these tuning parameters in any machine learning model
+that we might look at. Next we're gonna discuss
+a feature selection task. So for example, I have my house that I
+wanna list for sale and I might have a really, really long list of house
+attributes associated with this house. And I wanna figure out which
+are those subset of attributes that are really informative for
+assessing the value of my house. So, for example, maybe it doesn't
+really matter the fact that my house has a microwave when I'm going
+to predict the value of the house. So, for reasons of interpretability, it can be really useful to do
+this feature selection task. And in addition, we're gonna show
+that if we have just a few set of features in our model, after we've done
+this feature selection, then that can lead to significant increases in
+efficiencies in forming our predictions. And so, to do this feature selection task,
+the first thing we're gonna talk about is ways to explicitly search between models,
+that include different sets of features. But than we're gonna turn to a method
+that's really really similar in spirit to ridge regression that allows us to do
+this feature selection task implicitly. In particular, again we're gonna have this
+measure of fit of our function to our data and a measure of the model complexity but it's gonna be a different measure
+that what we use for ridge. And this measure in particular
+is what's gonna lead to these, what are called sparse
+solutions where only a few of the features are actually
+present in our estimated model. And we're gonna use this lasso
+regression task as an opportunity to teach about another optimization
+method that's called coordinate descent. So we talked about gradient
+descent earlier, and this is another one of these really
+important optimization methods that we're gonna see again later
+in this specialization. And what coordinate descent does
+Is instead of solving a big, high dimensional optimization objective,
+it's gonna go coordinate by coordinate. So variable by variable,
+optimizing each in turn. So we're gonna end up making
+these axis aligned moves as we iterate in this algorithm. So again, just like radiant descent,
+it's an iterative procedure. But is fundamentally
+a different formulation for how these iterates are defined. Finally we're gonna conclude by discussing
+something called nearest neighbor regression, which is a really simple,
+but very, very powerful technique. So in the simplest case that we're gonna
+describe, if I'm interested in predicting the value of my house, what I'm gonna do
+is I'm gonna go through my data set and I'm gonna find the most
+similar house to mine. Then, I'm simply gonna look at
+how much that house sold for and I'm gonna say that's what I'm
+predicting my house sale's price to be. Well you can generalize this idea of just
+looking at the most similar house to looking at a set of similar houses and then taking the average value of
+those houses as your prediction, but what you can also do is something
+that's called kernel regression. Where you actually include
+every observation in your data set informing
+your predicted value. But when you go to computer this
+average you're gonna weight the houses by how close they are to you. So houses that are very similar which are
+quote, unquote, nearby to you in the space of similarity are gonna be weighted very
+heavily in this weighted average, and houses that are very dissimilar
+are gonna be down weighted a lot. And this leads to these really nice fits
+for regression and they're very adaptive. As you get more data you can describe
+more and more complicated relationships. So these methods are useful
+when you have lots of data, and we're gonna discuss this data versus
+complexity trade off in this module. So in summary, we're gonna cover
+a lot of ground in this course. So we're gonna talk about all different
+kinds of models for regression, but we're also gonna talk
+about very general purpose optimization algorithms like gradient
+descent and coordinate descent, and a whole bunch of concepts that are really
+foundational to machine learning. Including things like the bias variance
+trade off, cross validation for selecting tuning parameters,
+ideas of sparsity and over fitting and how to do model selection and
+feature selection. So, this is gonna be a really, really
+important course in our specialization. [MUSIC]

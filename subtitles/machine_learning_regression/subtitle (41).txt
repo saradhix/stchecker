@@ -1,0 +1,81 @@
+Well of course to fit a function to data,
+we need to be able to talk about what the cost is of any given fit to
+the data and then search our algorithm is going to be to search over all these
+different fits to minimize this cost. So let's again talk about the cost of
+the fit, but now, for multiple regression. So in terms of our flow chart for
+regression, we're talking about
+the quality metric term. First, let's remember what the Cost was, in terms of our simple
+linear regression model. And so, for any given fit, we define something
+called the residual sum of squares of our. Parameter. So that's defining the actual
+fit that we're looking at. W0 and W1, the intercept and slope. And our residual sum of squares was
+looking at taking our actual observation Yi, subtracting off the fitted
+function at that point Xi, taking the square, summing over all
+observations in our training dataset, and what is this term here? Well that's just our predicted
+value of observation Yi ,if we use a line defined by W0,
+and W1. Okay, so to be explicit if
+we're looking at sum Xi, then We know that y had i, is equal to the estimated function at Xi. So now that we've recalled what
+residual sum of squares is for a simple linear aggression model, we can talk about residual sum of squares
+in the case of multiple regression. Where we're looking at these fits
+to these d-dimensional curves. And so, what we're gonna look at is
+we're gonna look at our residuals again. The residual is the difference
+between our actual observation and our predicted value. So we're gonna plug in our predicted
+value there, so our predicted value for the ith observation, what is that? Well in our vector notation, what we
+do is we take each one of the weights, In our model so,
+the regression coefficients. And this is this w vector
+that we're looking at here, and then we multiply our features for
+that observation by that factor. So, here we have h0 of Xi, h1 of Xi, all the way up to HD of Xi and this remember was h transpose of Xi, so. What is our predicted value for
+the ith observation. If we assume that we use a fit defined
+by W0, W1, all the way up to WD, oh it's simply H transpose Xi times W. So, just to use the notation that we've been using before,
+this here is Y hat i, assuming we use W,
+as the parameters of this fit. Okay. So again, let's take this residual sum of
+squares and write it in matrix notation. That's kind gonna be a theme
+of our derivation, and to do this,
+I'm just gonna write down the result, and then I'm going to explain
+why it's the result. So the result, is that in matrix notation,
+I have my y vector, that the vector of all my
+observations stacked up, -H that, big green matrix, times this w vector, the
+vector of all my regression coefficients, then I'm gonna take this and
+I'm gonna write transpose. And then I'm just gonna write it again. Okay, so
+why are these two things equivalent? Well, we're gonna break up
+the explanation into two different parts. And the first part, is just looking
+at this term here and in particular, we're going to think about stacking
+up all of our predicted values. So taking Y hat 1, Y hat 2,
+all the way up to Y hat N. So our N predicted observations and
+how do we predict our observations? Well we, just take the parameters,
+W0 to WD and remember that for
+each predicted observation, we multiply by the features
+associated with that observation and then we do that for each one of our
+observations and just like we did for the derivation of the matrix form for our
+model, we're talking about predictions, again, we're going to end up
+with this big H matrix here. It's exactly the same matrix
+that appeared in our model. It's the matrix of all of our features
+per observation stacked up together. Okay. So, now that we have this,
+we know that, I'll call this vector, Y hat, so we know that Y hat, the vector of all of our end predicted
+observations is equal to H times W. Okay. So, now let's take this turn, this y-Hw. And if we look at y-Hw,
+what is that equivalent to? Well, we know that h of w. That was a very ugly, little curly brace. H of w, is equivalent to y hat. So this is equivalent of looking at our
+vector of actual observed values and subtracting our vector
+of predicted values. So we take all our house sales prices, and
+we look at all the predicted house prices, given a set of parameters,
+w, and we subtract them. What is that vector? That vector is the vector of residuals, because the result of this is the difference between my first house sale and
+my predicted house sale. I call that the residual, for
+the first prediction, and likewise for the second, and all the way up to my nth observation, where just to be very clear,
+this residual sub i is equal to yi, my actual observation,
+minus my predicted observation. Okay, so what we showed on this slide
+is the fact that this term here, y -Hw, is equivalent to a vector of
+the residuals from my predictions. Okay, so now let's move on to the second
+part of the reasoning behind this equation here. Which is the fact that,
+when I multiply this vector, we now know that the result of
+this is a vector of residuals by, it's transposed, so, I have written the
+transpose of this residual vector here. Then what's the result of this? Okay, well, let me do out this vector,
+vector multiplication, this inner product here, and
+what I get is, I get, residual1 here times residual1. So, what's the result of that? That's residual1 squared. Then I go to the second element. I have residual two times residual two,
+and that's residual2 squared. And I multiply all these elements,
+and at the very end, I get residual for
+my nth observation, squared. And so what is this equivalent to? This is equivalent to, I can just
+rewrite this using the sigma notion, summing over all of my observations,
+the residual, sub i squared. And this, by definition, that is exactly
+what residual sum of squares is. This is residual sum of squares
+using these w parameters. I'm summing up the square of my residuals
+from the predictions made using w. Okay, so
+this is my little justification that I can take this residual sum of
+squares that we wrote here and I can rewrite it equivalently in this matrix notation.

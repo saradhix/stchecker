@@ -1,0 +1,82 @@
+[MUSIC] So let's go through some of the regression
+fundamentals, what's our data, what's the model that we are going to use,
+and what's our task event interest. Okay, so the first thing is we're
+going to take all of our data, so all these houses that we looked
+at that sold recently, and for each one of them we're going
+to record some information. And in this case, in the case of simple
+regression where we're assuming that there's just one variable that we're
+using to predict our house price, specifically square feet, for every house
+we're going to record how many square feet that the house had and what the price
+was that that house sold for. And so we record this for each of our
+houses that have sold in the past. And this variable x represents
+the input to our model, okay? This is what we're going to use for
+our prediction. And what's the output,
+what are we trying to predict? Well, we're trying to predict
+the price of the house. So that y variable is
+going to be the output. So what's the difference between
+the input and the output? Well the output y is our quantity
+of interest, this is our goal, we're trying to predict the value of
+our house so we can list it for sale. And we're going to assume that
+we can predict y based on x, so we can predict the value of the house
+based on the square footage of the house. Okay.
+So I'm going to take my data, and I'm going to plot it x versus y, where x is the square footage of each
+house, and y is the sales price. So that's what this cloud
+of points represents. And we made exactly this plot in
+the first course of this specialization. So, just to be clear,
+this circle here represents, let's see the ith house in my data set. And that house had some number of square of feet xi, and
+some sales price yi. Okay, so this is my data,
+and what my model represents is the expected relationship between x and
+y, remember that's what we're trying to figure out, because if we have that
+relationship we can use it for predicting the value of my house
+that I'd like to list for sale. Okay, so we're going to assume some relationship
+which is some functional relationship. So I'm going to call this
+some function F of X. And like said,
+what that function represents is the expected relationship between x and y. So let's walk through this
+in a little bit more detail. So, let's look at this house just for to make this a little bit cleaner,
+lets look at another house here. Now I've reused the letter
+that I like to use. So I'm going to call this house. Sorry, I'm going to re-annotate this. I'm going to call this house j. This is xj and yj. And the reason I'm doing this is
+because i is a special notation for the house that I'm interested in. And so now, this house here that I'm
+looking at I'm going to say that it sold for some value, yi. And based on my model, what my model
+is saying is that I'm assuming that yi is approximately equal to F(xi). This functional relationship between
+the square footage of house i and its sales price, yi. But I'm assuming that my
+model's not 100% accurate. You can easily imagine that
+there are errors in this model, because you can have two houses that have
+exactly the same number of square feet, but sell for very different prices. They could have sold at different times. They could have had different numbers
+of bedrooms, or bathrooms, or size of the yard, or specific location,
+neighborhoods, school districts. Lots of things that we might not have
+taken into account in our model. So our model is just what we're using as
+our belief about the relationship for prediction, but it's not 100% accurate,
+there's some error. So the error, so just to be clear,
+this point here, this x is exactly f(xi), it's the function
+evaluated at some xi value. And we're saying that our observations,
+which don't fall exactly on this curve,
+defined by F, there's some error. So we'll call this error specific to ISI,
+we're going to call it epsilon I. So what our regression model's saying, is that we're assuming that our observation YI is equal to f(xi), our expected relationship between x and y, plus some error. And, in particular, we're treating
+this error as a random quantity and we're going to assume that
+the expected value of this error, so this notation is the expected value. So we're assuming the expected
+value of this air is equal to zero. And what is expected value? Well, it's just a weighted average over
+all possible values that air can take, weighted by how likely the air
+is to take each of those values. But what this is saying, saying that
+our expected error is going to be zero, means that it's equally likely, that we're going to have positive or
+negative error for any given house sale. So, it's equally likely that our
+error is positive or negative. And what does this imply? This implies that it's equally
+likely that our observation, the specific observation that we get,
+is above or below the functional
+relationship defined by F. So, Y-i is equally likely to be above or below, F of xi. Okay. So, I want to be clear that this
+is the model that we're using. This is how we're
+assuming the world works. And there's this very famous
+quote by George Box that says, "Essentially, all models are wrong,
+but some are useful". So what this means is no models going
+to be exactly how the world works. It's not going to exactly predict how
+houses sell, just based on square feet, or even if you incorporated
+other things as well. There's always different
+idiosyncracies in how the world works. But models are going to
+represent some useful extraction of the relationship between,
+for example square foot and price, that is useful for
+a task such as prediction. Okay, so I want to make it very clear
+that everything I wrote on the last line is just our belief about how
+the world is going to work. Or maybe it's not even our belief, maybe
+it's just something we're going to use because it's useful,
+as George Bach said, or can be useful. And we're going to talk a lot about how
+we assess how useful things are in this course, but we're going to hold
+off on that conversation for now. [MUSIC]

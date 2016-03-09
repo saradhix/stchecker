@@ -1,0 +1,15 @@
+[MUSIC] So that's multiple regression. And as you've seen, we've talked about
+what we said was the most widely used machine learning tool out there,
+along with the most widely used algorithmic tool,
+this gradient descent algorithm. So this was a really, really important
+module that we've just covered. And now that you've worked through
+this module, what you're able to do is describe linear regression when you have
+multiple features of just a single input, when you're talking about
+polynomial regression. Or things like modeling seasonality and
+time series, but we also talked about how to handle multiple different inputs,
+and features of these different inputs. And all of these models fall in
+the context of multiple regression. And for this multiple linear regression
+model we talked about how to fit the model, using both a closed form
+solution as well as gradient descent. And we also talked about how we can
+interpret the coefficients of some cases of this multiple regression model
+as well as using it for prediction. [MUSIC]
